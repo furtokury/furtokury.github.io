@@ -1,30 +1,30 @@
 [
   {
-    "name": "Homepage",
+    "name": "홈페이지",
     "details": "toku.shtelo.org",
     "url": "https://toku.shtelo.org",
     "icon": "icon_homepage.svg"
   },
   {
-    "name": "Twitter · X",
+    "name": "트위터 · X",
     "details": "@furtokury",
     "url": "https://x.com/furtokury",
     "icon": "icon_x.svg"
   },
   {
-    "name": "Discord",
+    "name": "디스코드",
     "details": "furtokury",
     "url": "https://discord.com/users/1392093280967200860",
     "icon": "icon_discord.svg"
   },
   {
-    "name": "Kakaotalk",
+    "name": "카카오톡 오픈채팅",
     "details": "furtokury",
     "url": "https://open.kakao.com/me/furtokury",
     "icon": "icon_kakaotalk.svg"
   },
   {
-    "name": "Email",
+    "name": "이메일",
     "details": "junhg0211@gmail.com",
     "url": "mailto:junhg0211@gmail.com",
     "icon": "icon_email.svg"

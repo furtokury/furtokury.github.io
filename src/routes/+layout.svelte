@@ -40,19 +40,19 @@
       </div>
       <div class="header-navigation">
         <div class="header-navigation-item">
-          <a href="/">HOME</a>
+          <a href="/">홈</a>
         </div>
         <div class="header-navigation-item">
-          <a href="/profile">PROFILE</a>
+          <a href="/profile">프로필</a>
         </div>
         <div class="header-navigation-item">
-          <a href="/illusts">ILLUSTS</a>
+          <a href="/illusts">일러스트</a>
         </div>
         <div class="header-navigation-item">
-          <a href="/meetings">MEETINGS</a>
+          <a href="/meetings">모임</a>
         </div>
         <div class="header-navigation-item">
-          <a href="/contact">CONTACT</a>
+          <a href="/contact">연락처</a>
         </div>
       </div>
     </div>
@@ -67,11 +67,11 @@
     <div class="footer-column">
       <div class="footer-column-title">NAVIGATION</div>
       <div class="footer-column-items">
-        <div><a href="/">Home</a></div>
-        <div><a href="/profile">Profile</a></div>
-        <div><a href="/illusts">Illusts</a></div>
-        <div><a href="/meetings">Meetings</a></div>
-        <div><a href="/contact">Contact</a></div>
+        <div><a href="/">홈</a></div>
+        <div><a href="/profile">프로필</a></div>
+        <div><a href="/illusts">일러스트</a></div>
+        <div><a href="/meetings">모임</a></div>
+        <div><a href="/contact">연락처</a></div>
       </div>
     </div>
     <div class="footer-column">
@@ -83,6 +83,10 @@
       </div>
     </div>
     <div class="footer-column">
+      <div class="footer-column-title">SHORTCUTS</div>
+      <div class="footer-column-items">
+        <div><a href="https://github.com/furtokury/furtokury.github.io">GitHub 레포지토리</a></div>
+      </div>
     </div>
     <div class="footer-column">
     </div>
