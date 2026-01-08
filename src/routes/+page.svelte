@@ -19,7 +19,7 @@
     <div class="description">
       <div class="description-header">
         <img src="/images/logo.svg" alt="TOKU Logo" width="15">
-        <div>FURTOKURY</div>
+        <div>FUR<strong>TOKU</strong>RY</div>
       </div>
       <div class="description-text">
         <div>“ 말차 족제비 토쿠 ”</div>
@@ -108,9 +108,12 @@
 
   .description-header {
     font-size: 52px;
-    font-weight: 900;
     margin-bottom: 40px;
     text-shadow: 0 2px 0 #A9B58C;
+  }
+
+  .description-header strong {
+    font-weight: 900;
   }
 
   .description-text div {
