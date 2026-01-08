@@ -16,6 +16,10 @@
   });
 </script>
 
+<svelte:head>
+  <meta name="og:title" content="Gallery" />
+</svelte:head>
+
 <div class="container">
   <div class="title">GALLERY</div>
   {#each galleryData as year}

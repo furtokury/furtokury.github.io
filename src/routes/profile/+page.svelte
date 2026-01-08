@@ -2,6 +2,10 @@
   import FadeInAnimation from "../FadeInAnimation.svelte";
 </script>
 
+<svelte:head>
+  <meta property="og:title" content="TOKU Profile" />
+</svelte:head>
+
 <div class="header-skipper"></div>
 <img src="/sheet.png" alt="Toku Character Sheet" class="sheet">
 <div class="spacer" style="height: 50px;"></div>

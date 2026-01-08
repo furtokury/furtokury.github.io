@@ -2,6 +2,10 @@
   import FadeInAnimation from "./FadeInAnimation.svelte";
 </script>
 
+<svelte:head>
+  <meta property="og:title" content="TOKU" />
+</svelte:head>
+
 <div class="banner">
   <img class="banner-image" src="/banner.jpg" alt="Banner">
   <div class="banner-overlay">
