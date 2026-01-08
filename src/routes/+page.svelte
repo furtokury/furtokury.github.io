@@ -10,7 +10,7 @@
   <img class="banner-image" src="/images/banner.jpg" alt="Banner">
   <div class="banner-overlay">
     <div class="banner-overlay-text">
-      <div>SCROLL DOWN</div>
+      <div class="banner-scroll-down">SCROLL DOWN</div>
     </div>
   </div>
 </div>
@@ -69,6 +69,21 @@
     color: white;
     text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
     opacity: 80%;
+  }
+
+  .banner-scroll-down {
+    animation: scrollDown 2s infinite;
+  }
+
+  @keyframes scrollDown {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(10px);
+      opacity: 0.4;
+    }
   }
 
   .container {
