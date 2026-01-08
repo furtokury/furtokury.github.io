@@ -49,11 +49,17 @@
 
   .contacts {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 24px;
     margin: auto;
     width: fit-content;
     margin-top: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contact-item {
+    width: 300px;
   }
 
   .contact-item a {
