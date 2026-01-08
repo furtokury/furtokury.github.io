@@ -68,7 +68,7 @@
   .header {
     position: fixed;
     width: 100vw;
-    z-index: 1000;
+    z-index: 1;
   }
 
   .header a {
@@ -118,17 +118,6 @@
     clip-path: polygon(0 20px, 100% 0, 100% 10px, 0% 30px);
   }
 
-  @media (max-width: 600px) {
-    .header-logo {
-      flex: 1;
-      text-align: center;
-    }
-
-    .header-navigation {
-      display: none;
-    }
-  }
-
   .footer {
     margin-top: 100px;
     padding: 20px;
@@ -174,4 +163,32 @@
   .footer-column-right-name {
     margin-top: 8px;
   }
+
+  @media (max-width: 600px) {
+    .header-logo {
+      flex: 1;
+      text-align: center;
+    }
+
+    .header-content {
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .header-navigation {
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-content {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .footer-column-right {
+      text-align: center;
+    }
+  }
+
 </style>

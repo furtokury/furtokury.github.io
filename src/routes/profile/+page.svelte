@@ -1,3 +1,4 @@
+<div class="header-skipper"></div>
 <img src="/sheet.png" alt="Toku Character Sheet" class="sheet">
 <div class="spacer" style="height: 50px;"></div>
 <div class="container">
@@ -56,6 +57,7 @@
 <style>
   .sheet {
     width: 600px;
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -68,6 +70,16 @@
     column-gap: 40px;
     max-width: 900px;
     margin: auto;
+  }
+
+  @media (max-width: 600px) {
+    .header-skipper {
+      height: 50px;
+    }
+
+    .container {
+      column-count: 1;
+    }
   }
 
   .section {
