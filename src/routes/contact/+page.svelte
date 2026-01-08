@@ -20,7 +20,7 @@
       <FadeInAnimation>
         <div class="contact-item">
           <a href={contact.url} target="_blank" rel="noopener noreferrer">
-            <img src={'/images/' + contact.icon} alt={contact.name} />
+            <img src={'/images/' + contact.icon} alt={contact.name} class="contact-icon" />
             <div>
               <div>{contact.name}</div>
               <div>{contact.details}</div>
@@ -72,5 +72,9 @@
   .contact-item div div:first-child {
     font-size: 20px;
     font-weight: 700;
+  }
+
+  .contact-icon {
+    border-radius: 30%;
   }
 </style>
