@@ -1,5 +1,17 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+
 	let { children } = $props();
+
+  let contacts = $state([]);
+
+  onMount(() => {
+    fetch("/contacts.json")
+      .then((response) => response.json())
+      .then((data) => {
+        contacts = data;
+      });
+  });
 </script>
 
 <svelte:head>
@@ -47,10 +59,9 @@
     <div class="footer-column">
       <div class="footer-column-title">CONTACT</div>
       <div class="footer-column-items">
-        <div><a href="https://toku.shtelo.org/">Homepage</a></div>
-        <div><a href="https://x.com/furtokury">Twitter · X</a></div>
-        <div><a href="https://discord.com/users/1392093280967200860">Discord</a></div>
-        <div><a href="mailto:junhg0211@gmail.com">Email</a></div>
+        {#each contacts as contact}
+          <div><a href="{contact.url}" target="_blank" rel="noopener">{contact.name}</a></div>
+        {/each}
       </div>
     </div>
     <div class="footer-column">
@@ -190,5 +201,4 @@
       text-align: center;
     }
   }
-
 </style>
