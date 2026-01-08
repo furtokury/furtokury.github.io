@@ -1,0 +1,177 @@
+<script lang="ts">
+	let { children } = $props();
+</script>
+
+<svelte:head>
+  <title>TOKU</title>
+</svelte:head>
+
+<div class="header">
+  <div class="header-container">
+    <div class="header-content">
+      <div class="header-logo">
+        <a href="/">TOKU</a>
+      </div>
+      <div class="header-navigation">
+        <div class="header-navigation-item">
+          <a href="/">HOME</a>
+        </div>
+        <div class="header-navigation-item">
+          <a href="/profile">PROFILE</a>
+        </div>
+        <div class="header-navigation-item">
+          <a href="/gallery">GALLERY</a>
+        </div>
+        <div class="header-navigation-item">
+          <a href="/contact">CONTACT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-footer"></div>
+  <div class="header-shadow"></div>
+</div>
+<div style="height: 64px;"></div>
+{@render children()}
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-column">
+      <div class="footer-column-title">NAVIGATION</div>
+      <div class="footer-column-items">
+        <div><a href="/">Home</a></div>
+        <div><a href="/profile">Profile</a></div>
+        <div><a href="/gallery">Gallery</a></div>
+        <div><a href="/contact">Contact</a></div>
+      </div>
+    </div>
+    <div class="footer-column">
+      <div class="footer-column-title">CONTACT</div>
+      <div class="footer-column-items">
+        <div><a href="https://toku.shtelo.org/">Homepage</a></div>
+        <div><a href="https://x.com/furtokury">Twitter · X</a></div>
+        <div><a href="https://discord.com/users/1392093280967200860">Discord</a></div>
+        <div><a href="mailto:junhg0211@gmail.com">Email</a></div>
+      </div>
+    </div>
+    <div class="footer-column">
+    </div>
+    <div class="footer-column">
+    </div>
+    <div class="footer-column footer-column-right">
+      <img src="/logo-beige.svg" alt="TOKU Logo" width="15">
+      <div class="footer-column-right-name">© 2024-2025 TOKU.<br>All rights reserved.</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .header {
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+  }
+
+  .header a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .header a:hover {
+    text-decoration: underline;
+  }
+
+  .header-container {
+    background-color: #5b7531;
+    padding: 0 8px;
+  }
+
+  .header-content {
+    display: flex;
+    gap: 100px;
+    max-width: 900px;
+    padding: 12px 0 0 0;
+    margin: auto;
+  }
+
+  .header-logo {
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  .header-navigation {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .header-footer {
+    background-color: #5b7531;
+    height: 20px;
+    clip-path: polygon(0 0, 100% 0, 0% 100%);
+  }
+
+  .header-shadow {
+    background-color: #d9aa8b;
+    position: relative;
+    top: -20px;
+    height: 30px;
+    clip-path: polygon(0 20px, 100% 0, 100% 10px, 0% 30px);
+  }
+
+  @media (max-width: 600px) {
+    .header-logo {
+      flex: 1;
+      text-align: center;
+    }
+
+    .header-navigation {
+      display: none;
+    }
+  }
+
+  .footer {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #5b7531;
+    color: #faf7ea;
+  }
+
+  .footer a {
+    color: #faf7ea;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-content {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-column {
+    flex: 1;
+  }
+
+  .footer-column-items div {
+    margin-bottom: 4px;
+  }
+
+  .footer-column-title {
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #A9B58C;
+  }
+
+  .footer-column-right {
+    text-align: right;
+    font-size: 11px;
+  }
+
+  .footer-column-right-name {
+    margin-top: 8px;
+  }
+</style>

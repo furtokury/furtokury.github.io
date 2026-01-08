@@ -1,1 +1,1 @@
-# furtokury.shtelo.org
+# furtokury.github.io
