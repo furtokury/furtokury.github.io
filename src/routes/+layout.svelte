@@ -36,7 +36,7 @@
   <div class="header-container">
     <div class="header-content">
       <div class="header-logo">
-        <a href="/">TOKU</a>
+        <a href="/"><img src="/images/logo-beige.svg" style="height: 24px; transform: translateY(3px);"> TOKU</a>
       </div>
       <div class="header-navigation">
         <div class="header-navigation-item">
@@ -105,7 +105,7 @@
   }
 
   .header a {
-    color: white;
+    color: #faf7ea;
     text-decoration: none;
   }
 
