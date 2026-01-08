@@ -49,6 +49,9 @@
           <a href="/illusts">ILLUSTS</a>
         </div>
         <div class="header-navigation-item">
+          <a href="/meetings">MEETINGS</a>
+        </div>
+        <div class="header-navigation-item">
           <a href="/contact">CONTACT</a>
         </div>
       </div>
@@ -67,6 +70,7 @@
         <div><a href="/">Home</a></div>
         <div><a href="/profile">Profile</a></div>
         <div><a href="/illusts">Illusts</a></div>
+        <div><a href="/meetings">Meetings</a></div>
         <div><a href="/contact">Contact</a></div>
       </div>
     </div>
