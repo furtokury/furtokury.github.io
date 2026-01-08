@@ -33,7 +33,7 @@
       {#each year.items as item}
         <li class="meeting-item">
           <FadeInAnimation>
-            {item.date}<br><strong>{item.title}</strong> ({item.place}){item.members ? ': ' : ''}
+            {item.date}: <strong>{item.title}</strong> ({item.place}){@html item.members ? '<br>' : ''}
             {#each item.members as member}
               {member}{item.members.indexOf(member) !== item.members.length - 1 ? ', ' : ''}
             {/each}
