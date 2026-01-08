@@ -49,7 +49,6 @@
 
 <style>
   .gallery-item {
-    flex: 1;
     min-width: 250px;
     background-color: white;
     background-size: 110%;

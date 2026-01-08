@@ -1,5 +1,6 @@
 <script lang="ts">
   import GalleryItem from "./GalleryItem.svelte";
+  import FadeInAnimation from "../FadeInAnimation.svelte";
   import { onMount } from "svelte";
 
   let galleryData = [];
@@ -19,12 +20,16 @@
 <div class="container">
   <div class="title">GALLERY</div>
   {#each galleryData as year}
-    <div class="timestamp">{year.year}</div>
+    <FadeInAnimation>
+      <div class="timestamp">{year.year}</div>
+    </FadeInAnimation>
     <div class="images">
       {#each year.items as item}
-        <GalleryItem src={'/gallery/' + item.src} title={item.title} date={item.date}>
-          {item.description}
-        </GalleryItem>
+        <FadeInAnimation>
+          <GalleryItem src={'/gallery/' + item.src} title={item.title} date={item.date}>
+            {item.description}
+          </GalleryItem>
+        </FadeInAnimation>
       {/each}
     </div>
   {/each}

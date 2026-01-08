@@ -1,4 +1,5 @@
 <script>
+  import FadeInAnimation from "./FadeInAnimation.svelte";
 </script>
 
 <div class="banner">
@@ -9,30 +10,32 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="description">
-    <div class="description-header">
-      <img src="/logo.svg" alt="TOKU Logo" width="15">
-      <div>FURTOKURY</div>
-    </div>
-    <div class="description-text">
-      <div>“ 말차 족제비 토쿠 ”</div>
-      <div>
-        안녕하세요! 저는 '토쿠'라는 이름으로 활동하는 말차 족제비 토쿠입니다.<br>
-        제 이름은 일본어로 '풀다'를 의미하는 '토쿠'에서 유래되었습니다. 저는 다양한 창작 활동을 통해 여러분과 소통하고자 합니다.
+<FadeInAnimation>
+  <div class="container">
+    <div class="description">
+      <div class="description-header">
+        <img src="/logo.svg" alt="TOKU Logo" width="15">
+        <div>FURTOKURY</div>
       </div>
-      <div>
-        저는 주로 퍼슈팅, 퍼슈트 제작 작업을 하고 있습니다. 퍼슈팅은 저의 열정이자 창작의 원천입니다.<br>
-        또한, 퍼슈트 제작 작업을 통해 저만의 독특한 스타일과 아이디어를 표현하고 있습니다.
+      <div class="description-text">
+        <div>“ 말차 족제비 토쿠 ”</div>
+        <div>
+          안녕하세요! 저는 '토쿠'라는 이름으로 활동하는 말차 족제비 토쿠입니다.<br>
+          제 이름은 일본어로 '풀다'를 의미하는 '토쿠'에서 유래되었습니다. 저는 다양한 창작 활동을 통해 여러분과 소통하고자 합니다.
+        </div>
+        <div>
+          저는 주로 퍼슈팅, 퍼슈트 제작 작업을 하고 있습니다. 퍼슈팅은 저의 열정이자 창작의 원천입니다.<br>
+          또한, 퍼슈트 제작 작업을 통해 저만의 독특한 스타일과 아이디어를 표현하고 있습니다.
+        </div>
+        <div>
+          저는 제 작품을 통해 여러분과 소통하고, 새로운 아이디어를 공유하고자 합니다.<br>
+          제 작업에 관심이 있으시다면 언제든지 연락해 주세요. 함께 창작의 즐거움을 나누고 싶습니다!
+        </div>
+        <div>감사합니다!</div>
       </div>
-      <div>
-        저는 제 작품을 통해 여러분과 소통하고, 새로운 아이디어를 공유하고자 합니다.<br>
-        제 작업에 관심이 있으시다면 언제든지 연락해 주세요. 함께 창작의 즐거움을 나누고 싶습니다!
-      </div>
-      <div>감사합니다!</div>
     </div>
   </div>
-</div>
+</FadeInAnimation>
 
 <style>
   .banner-image {
