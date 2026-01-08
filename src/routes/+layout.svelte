@@ -84,7 +84,7 @@
     </div>
     <div class="footer-column footer-column-right">
       <img src="/logo-beige.svg" alt="TOKU Logo" width="15">
-      <div class="footer-column-right-name">© 2024-2025 TOKU.<br>All rights reserved.</div>
+      <div class="footer-column-right-name">© 2025-{new Date().getFullYear()} TOKU.<br>All rights reserved.</div>
     </div>
   </div>
 </div>
