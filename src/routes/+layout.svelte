@@ -46,7 +46,7 @@
           <a href="/profile">PROFILE</a>
         </div>
         <div class="header-navigation-item">
-          <a href="/gallery">GALLERY</a>
+          <a href="/illusts">ILLUSTS</a>
         </div>
         <div class="header-navigation-item">
           <a href="/contact">CONTACT</a>
@@ -66,7 +66,7 @@
       <div class="footer-column-items">
         <div><a href="/">Home</a></div>
         <div><a href="/profile">Profile</a></div>
-        <div><a href="/gallery">Gallery</a></div>
+        <div><a href="/illusts">Illusts</a></div>
         <div><a href="/contact">Contact</a></div>
       </div>
     </div>

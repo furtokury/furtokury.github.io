@@ -2,16 +2,16 @@
   import GalleryItem from "./GalleryItem.svelte";
   import { onMount } from "svelte";
 
-  let galleryData = [];
+  let illustData = [];
 
   onMount(() => {
-    fetch("/gallery/data.json")
+    fetch("/illusts.json")
       .then((response) => response.json())
       .then((data) => {
-        galleryData = data;
+        illustData = data;
       })
       .catch((error) => {
-        console.error("Error loading gallery data:", error);
+        console.error("Error loading illusts data:", error);
       });
   });
 </script>
@@ -21,12 +21,12 @@
 </svelte:head>
 
 <div class="container">
-  <div class="title">GALLERY</div>
-  {#each galleryData as year}
+  <div class="title">ILLUSTS</div>
+  {#each illustData as year}
     <div class="timestamp">{year.year}</div>
     <div class="images">
       {#each year.items as item}
-        <GalleryItem src={'/gallery/' + item.src} title={item.title} date={item.date}>
+        <GalleryItem src={'/illusts/' + item.src} title={item.title} date={item.date}>
           {item.description}
         </GalleryItem>
       {/each}
