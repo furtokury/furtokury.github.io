@@ -1,4 +1,14 @@
-<img class="full-image" src="/full-image.png" alt="Full Background">
+<script>
+</script>
+
+<div class="banner">
+  <img class="banner-image" src="/banner.jpg" alt="Banner">
+  <div class="banner-overlay">
+    <div class="banner-overlay-text">
+      <div>SCROLL DOWN</div>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="description">
     <div class="description-header">
@@ -25,13 +35,33 @@
 </div>
 
 <style>
-  .full-image {
+  .banner-image {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
     background-color: lightgrey;
     position: relative;
     top: -64px;
+  }
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0.2) 100%);
+    pointer-events: none;
+  }
+
+  .banner-overlay-text {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    opacity: 80%;
   }
 
   .container {
