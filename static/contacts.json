@@ -18,6 +18,12 @@
     "icon": "icon_discord.svg"
   },
   {
+    "name": "Kakaotalk",
+    "details": "furtokury",
+    "url": "https://open.kakao.com/me/furtokury",
+    "icon": "icon_kakaotalk.svg"
+  },
+  {
     "name": "Email",
     "details": "junhg0211@gmail.com",
     "url": "mailto:junhg0211@gmail.com",

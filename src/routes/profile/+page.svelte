@@ -15,7 +15,14 @@
       <div class="title">INFO</div>
       <div class="content">
         <ul>
-          <li>이름: 토쿠</li>
+          <li>
+            이름: 토쿠
+            <ul>
+              <li>영어: Toku</li>
+              <li>일본어: トク</li>
+              <li>중국어: 徒酷</li>
+            </ul>
+          </li>
           <li>종족: 족제비</li>
           <li>성별: 수컷</li>
           <li>키: 172cm</li>
