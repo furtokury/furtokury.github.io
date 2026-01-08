@@ -54,13 +54,6 @@
     will-change: opacity, transform;
   }
 
-  /* 보일 때
-  .fade.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-   */
-
   /* reduced motion 대응 */
   @media (prefers-reduced-motion: reduce) {
     .fade {
