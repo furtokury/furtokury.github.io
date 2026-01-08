@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import FadeInAnimation from "../FadeInAnimation.svelte";
 
   let meetings = $state([]);
 
@@ -25,14 +26,18 @@
 <div class="title">MEETINGS</div>
 <div class="container">
   {#each meetings as year}
-    <div class="timestamp">{year.year}</div>
+    <FadeInAnimation>
+      <div class="timestamp">{year.year}</div>
+    </FadeInAnimation>
     <ul>
       {#each year.items as item}
         <li class="meeting-item">
-          {item.date}<br><strong>{item.title}</strong> ({item.place}){item.members ? ': ' : ''}
-          {#each item.members as member}
-            {member}{item.members.indexOf(member) < item.members.length - 1 ? ', ' : ''}
-          {/each}
+          <FadeInAnimation>
+            {item.date}<br><strong>{item.title}</strong> ({item.place}){item.members ? ': ' : ''}
+            {#each item.members as member}
+              {member}{item.members.indexOf(member) !== item.members.length - 1 ? ', ' : ''}
+            {/each}
+          </FadeInAnimation>
         </li>
       {/each}
     </ul>

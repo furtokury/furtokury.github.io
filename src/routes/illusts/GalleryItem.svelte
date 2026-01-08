@@ -37,7 +37,7 @@
 </div>
 
 <div class="float-viewer" on:click={toggleFloatViewer} bind:this={floatViewer}>
-  <img {src} alt={title} />
+  <img {src} alt={title} class="float-viewer-image" />
   <div class="float-viewer-metadata">
     <div class="float-viewer-title">{title}</div>
     <div class="float-viewer-date">{date}</div>
@@ -59,6 +59,7 @@
     cursor: pointer;
     transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    break-inside: avoid;
   }
 
   .gallery-item:hover {
@@ -82,6 +83,7 @@
   .title {
     font-size: 18px;
     font-weight: bold;
+    max-width: calc(100% - 32px);
   }
 
   .date {
@@ -120,6 +122,10 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
     border-radius: 8px;
+  }
+
+  .float-viewer-image {
+    filter: drop-shadow(0 0 20px black);
   }
 
   .float-viewer-title {
