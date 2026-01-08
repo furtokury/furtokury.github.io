@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="header-skipper"></div>
-<img src="/sheet.png" alt="Toku Character Sheet" class="sheet">
+<img src="/images/sheet.png" alt="Toku Character Sheet" class="sheet">
 <div class="spacer" style="height: 50px;"></div>
 <div class="container">
   <FadeInAnimation>

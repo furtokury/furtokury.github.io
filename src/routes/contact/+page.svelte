@@ -20,7 +20,7 @@
       <FadeInAnimation>
         <div class="contact-item">
           <a href={contact.url} target="_blank" rel="noopener noreferrer">
-            <img src={contact.icon} alt={contact.name} />
+            <img src={'/images/' + contact.icon} alt={contact.name} />
             <div>
               <div>{contact.name}</div>
               <div>{contact.details}</div>

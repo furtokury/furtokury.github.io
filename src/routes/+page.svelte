@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="banner">
-  <img class="banner-image" src="/banner.jpg" alt="Banner">
+  <img class="banner-image" src="/images/banner.jpg" alt="Banner">
   <div class="banner-overlay">
     <div class="banner-overlay-text">
       <div>SCROLL DOWN</div>
@@ -18,7 +18,7 @@
   <div class="container">
     <div class="description">
       <div class="description-header">
-        <img src="/logo.svg" alt="TOKU Logo" width="15">
+        <img src="/images/logo.svg" alt="TOKU Logo" width="15">
         <div>FURTOKURY</div>
       </div>
       <div class="description-text">
