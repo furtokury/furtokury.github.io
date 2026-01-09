@@ -76,7 +76,6 @@
   }
 
   .business-card-section {
-    min-width: 14cm;
     flex: 2;
   }
 
