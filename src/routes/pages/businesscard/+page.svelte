@@ -77,6 +77,7 @@
 
   .business-card-section {
     flex: 2;
+    min-width: 300px;
   }
 
   .owners-section {
