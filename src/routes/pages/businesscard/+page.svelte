@@ -34,7 +34,7 @@
   </div>
   <div class="image-container-description">
     토쿠가 직접 디자인하여 100장 한정으로 만든 토쿠의 첫번째 명함입니다.<br>
-    토쿠에게 직접 받은 명함에는 토쿠의 서명과 명함 번호가 적혀 있습니다.
+    토쿠에게 직접 받은 명함에는 토쿠의 수필 서명과 명함 번호가 적혀 있습니다.
   </div>
   <div class="owners-title">Owners</div>
   <div class="owners-list">
@@ -52,6 +52,7 @@
   .container {
     max-width: 900px;
     margin: auto;
+    padding: 0 20px;
   }
 
   .title {
@@ -67,10 +68,11 @@
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .business-card-image {
-    max-width: 30%;
+    max-width: 250px;
     box-shadow: 0 0 20px #5b75317f;
   }
 
