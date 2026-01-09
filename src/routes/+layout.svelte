@@ -49,7 +49,7 @@
           <a href="/illusts">일러스트</a>
         </div>
         <div class="header-navigation-item">
-          <a href="/meetings">모임</a>
+          <a href="/pages">페이지</a>
         </div>
         <div class="header-navigation-item">
           <a href="/contact">연락처</a>
@@ -70,7 +70,7 @@
         <div><a href="/">홈</a></div>
         <div><a href="/profile">프로필</a></div>
         <div><a href="/illusts">일러스트</a></div>
-        <div><a href="/meetings">모임</a></div>
+        <div><a href="/pages">페이지</a></div>
         <div><a href="/contact">연락처</a></div>
       </div>
     </div>
