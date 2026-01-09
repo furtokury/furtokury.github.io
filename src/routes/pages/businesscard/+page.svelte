@@ -28,33 +28,38 @@
   <meta property="og:title" content="Business Cards" />
 </svelte:head>
 
+<Title>BUSINESS CARDS</Title>
 <div class="container">
-  <Title>BUSINESS CARDS</Title>
   <div class="title">ILLUST #1</div>
-  <FadeInAnimation>
-    <div class="image-container">
-      <img src="/images/business-card-1.svg" alt="Business Card #1" class="business-card-image" />
-      <img src="/images/business-card-1-back.svg" alt="Business Card Back #1" class="business-card-image" />
+  <div class="content-section">
+    <div class="business-card-section">
+      <FadeInAnimation>
+        <div class="owners-title">Preview</div>
+        <div class="image-container">
+          <img src="/images/business-card-1.svg" alt="Business Card #1" class="business-card-image" />
+          <img src="/images/business-card-1-back.svg" alt="Business Card Back #1" class="business-card-image" />
+        </div>
+        <div class="image-container-description">
+          2026년 1월 토쿠가 직접 디자인하여 100장 한정으로 만든 토쿠의 첫번째 명함입니다.<br>
+          토쿠에게 직접 받은 명함에는 토쿠의 수필 서명과 명함 번호가 적혀 있습니다.
+        </div>
+      </FadeInAnimation>
     </div>
-  </FadeInAnimation>
-  <FadeInAnimation>
-    <div class="image-container-description">
-      2026년 1월 토쿠가 직접 디자인하여 100장 한정으로 만든 토쿠의 첫번째 명함입니다.<br>
-      토쿠에게 직접 받은 명함에는 토쿠의 수필 서명과 명함 번호가 적혀 있습니다.
+    <div class="owners-section">
+      <FadeInAnimation>
+        <div class="owners-title">Owners</div>
+        <div class="owners-list">
+          {#each Array(businessCard1Data.count).fill(0).map((_, i) => i + 1) as i}
+            {#if businessCard1Data[i]}
+              <div class="owner-entry">
+                #{i} <strong>{businessCard1Data[i].name}</strong>
+              </div>
+            {/if}
+          {/each}
+        </div>
+      </FadeInAnimation>
     </div>
-  </FadeInAnimation>
-  <FadeInAnimation>
-    <div class="owners-title">Owners</div>
-    <div class="owners-list">
-      {#each Array(businessCard1Data.count).fill(0).map((_, i) => i + 1) as i}
-        {#if businessCard1Data[i]}
-          <div class="owner-entry">
-            #{i} - <strong>{businessCard1Data[i].name}</strong>
-          </div>
-        {/if}
-      {/each}
-    </div>
-  </FadeInAnimation>
+  </div>
 </div>
 
 <style>
@@ -64,19 +69,37 @@
     padding: 0 20px;
   }
 
+  .content-section {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .business-card-section {
+    min-width: 14cm;
+    flex: 2;
+  }
+
+  .owners-section {
+    flex: 1;
+    min-width: 200px;
+  }
+
   .title {
     font-size: 20px;
     margin-top: 40px;
     margin-bottom: 20px;
     text-shadow: 0 2px 0 #a9b58c;
-    text-align: center;
   }
 
   .image-container {
     display: flex;
     gap: 20px;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
+    background-color: #5b75311f;
+    padding: 40px;
+    border-radius: 12px;
   }
 
   .business-card-image {
@@ -85,7 +108,6 @@
   }
 
   .image-container-description {
-    text-align: center;
     margin-top: 16px;
     font-size: 16px;
   }
@@ -93,20 +115,15 @@
   .owners-title {
     font-size: 18px;
     font-weight: 700;
-    margin-top: 32px;
     margin-bottom: 12px;
-    text-align: center;
   }
 
   .owners-list {
     max-height: 300px;
     overflow-y: auto;
-    padding: 12px;
-    border-radius: 8px;
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
-    justify-content: center;
   }
 
   .owner-entry {
@@ -115,7 +132,6 @@
     padding: 4px 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    min-width: 120px;
     text-align: center;
     background-color: white;
   }
