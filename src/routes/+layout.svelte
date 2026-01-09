@@ -87,6 +87,9 @@
       <div class="footer-column-items">
         <div><a href="https://github.com/furtokury/furtokury.github.io">GitHub 레포지토리</a></div>
       </div>
+      <div class="footer-column-items">
+        <div><a href="https://me.shtelo.org/">내골격 홈페이지</a></div>
+      </div>
     </div>
     <div class="footer-column">
     </div>
