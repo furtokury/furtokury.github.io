@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import FadeInAnimation from "../../FadeInAnimation.svelte";
+  import Title from "../../Title.svelte";
 
   async function getBusinessCardData(n) {
     const result = {count: 0};
@@ -28,7 +29,8 @@
 </svelte:head>
 
 <div class="container">
-  <div class="title">BUSINESS CARD #1</div>
+  <Title>BUSINESS CARDS</Title>
+  <div class="title">ILLUST #1</div>
   <FadeInAnimation>
     <div class="image-container">
       <img src="/images/business-card-1.svg" alt="Business Card #1" class="business-card-image" />
@@ -37,7 +39,7 @@
   </FadeInAnimation>
   <FadeInAnimation>
     <div class="image-container-description">
-      토쿠가 직접 디자인하여 100장 한정으로 만든 토쿠의 첫번째 명함입니다.<br>
+      2026년 1월 토쿠가 직접 디자인하여 100장 한정으로 만든 토쿠의 첫번째 명함입니다.<br>
       토쿠에게 직접 받은 명함에는 토쿠의 수필 서명과 명함 번호가 적혀 있습니다.
     </div>
   </FadeInAnimation>
@@ -64,7 +66,6 @@
 
   .title {
     font-size: 20px;
-    font-weight: 900;
     margin-top: 40px;
     margin-bottom: 20px;
     text-shadow: 0 2px 0 #a9b58c;

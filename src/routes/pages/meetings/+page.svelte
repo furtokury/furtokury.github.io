@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import FadeInAnimation from "../../FadeInAnimation.svelte";
+  import Title from "../../Title.svelte";
 
   let meetingsData = $state([]);
   let friendInfo = {};
@@ -49,7 +50,7 @@
   <meta property="og:title" content="Meetings" />
 </svelte:head>
 
-<div class="title">MEETINGS</div>
+<Title>MEETINGS</Title>
 <div class="container">
   {#each meetingsData.meetings as year}
     <FadeInAnimation>
@@ -76,15 +77,6 @@
 </div>
 
 <style>
-  .title {
-    font-size: 64px;
-    font-weight: 900;
-    margin-top: 96px;
-    margin-bottom: 40px;
-    text-shadow: 0 2px 0 #A9B58C;
-    text-align: center;
-  }
-
   .container {
     max-width: 900px;
     margin: auto;
