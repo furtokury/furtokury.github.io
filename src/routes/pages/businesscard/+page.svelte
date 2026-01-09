@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+  import FadeInAnimation from "../../FadeInAnimation.svelte";
 
   async function getBusinessCardData(n) {
     const result = {count: 0};
@@ -28,24 +29,30 @@
 
 <div class="container">
   <div class="title">BUSINESS CARD #1</div>
-  <div class="image-container">
-    <img src="/images/business-card-1.svg" alt="Business Card #1" class="business-card-image" />
-    <img src="/images/business-card-1-back.svg" alt="Business Card Back #1" class="business-card-image" />
-  </div>
-  <div class="image-container-description">
-    토쿠가 직접 디자인하여 100장 한정으로 만든 토쿠의 첫번째 명함입니다.<br>
-    토쿠에게 직접 받은 명함에는 토쿠의 수필 서명과 명함 번호가 적혀 있습니다.
-  </div>
-  <div class="owners-title">Owners</div>
-  <div class="owners-list">
-    {#each Array(businessCard1Data.count).fill(0).map((_, i) => i + 1) as i}
-      {#if businessCard1Data[i]}
-        <div class="owner-entry">
-          #{i} - <strong>{businessCard1Data[i].name}</strong>
-        </div>
-      {/if}
-    {/each}
-  </div>
+  <FadeInAnimation>
+    <div class="image-container">
+      <img src="/images/business-card-1.svg" alt="Business Card #1" class="business-card-image" />
+      <img src="/images/business-card-1-back.svg" alt="Business Card Back #1" class="business-card-image" />
+    </div>
+  </FadeInAnimation>
+  <FadeInAnimation>
+    <div class="image-container-description">
+      토쿠가 직접 디자인하여 100장 한정으로 만든 토쿠의 첫번째 명함입니다.<br>
+      토쿠에게 직접 받은 명함에는 토쿠의 수필 서명과 명함 번호가 적혀 있습니다.
+    </div>
+  </FadeInAnimation>
+  <FadeInAnimation>
+    <div class="owners-title">Owners</div>
+    <div class="owners-list">
+      {#each Array(businessCard1Data.count).fill(0).map((_, i) => i + 1) as i}
+        {#if businessCard1Data[i]}
+          <div class="owner-entry">
+            #{i} - <strong>{businessCard1Data[i].name}</strong>
+          </div>
+        {/if}
+      {/each}
+    </div>
+  </FadeInAnimation>
 </div>
 
 <style>
