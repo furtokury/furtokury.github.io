@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
   import FadeInAnimation from "../FadeInAnimation.svelte";
+  import Title from "../Title.svelte";
 
   let contacts = $state([]);
 
@@ -14,7 +15,7 @@
 </script>
 
 <div class="container">
-  <div class="title">CONTACT</div>
+  <Title>CONTACT</Title>
   <div class="contacts">
     {#each contacts as contact}
       <FadeInAnimation>
@@ -37,14 +38,6 @@
     max-width: 900px;
     margin: auto;
     padding: 0 20px;
-  }
-
-  .title {
-    font-size: 64px;
-    font-weight: 900;
-    margin-top: 96px;
-    text-shadow: 0 2px 0 #A9B58C;
-    text-align: center;
   }
 
   .contacts {

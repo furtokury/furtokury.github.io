@@ -1,6 +1,7 @@
 <script>
   import "bootstrap-icons/font/bootstrap-icons.css";
   import { onMount } from "svelte";
+  import Title from "../Title.svelte";
 
   let pages = $state([]);
 
@@ -17,7 +18,7 @@
   <meta property="og:title" content="Pages" />
 </svelte:head>
 
-<div class="title">PAGES</div>
+<Title>PAGES</Title>
 <div class="container">
   <div class="pages-list">
     {#each pages as page}
@@ -30,15 +31,6 @@
 </div>
 
 <style>
-  .title {
-    font-size: 64px;
-    font-weight: 900;
-    margin-top: 96px;
-    margin-bottom: 40px;
-    text-shadow: 0 2px 0 #A9B58C;
-    text-align: center;
-  }
-
   .container {
     max-width: 900px;
     margin: auto;

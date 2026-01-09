@@ -1,6 +1,7 @@
 <script lang="ts">
   import GalleryItem from "./GalleryItem.svelte";
   import { onMount } from "svelte";
+  import Title from "../Title.svelte";
 
   let illustData = [];
 
@@ -21,7 +22,7 @@
 </svelte:head>
 
 <div class="container">
-  <div class="title">ILLUSTS</div>
+  <Title>ILLUSTS</Title>
   {#each illustData as year}
     <div class="timestamp">{year.year}</div>
     <div class="images">
@@ -39,15 +40,6 @@
     max-width: 900px;
     margin: auto;
     padding: 0 20px;
-  }
-
-  .title {
-    font-size: 64px;
-    font-weight: 900;
-    margin-top: 96px;
-    margin-bottom: 40px;
-    text-shadow: 0 2px 0 #A9B58C;
-    text-align: center;
   }
 
   .timestamp {
