@@ -59,7 +59,7 @@
       {#each year.items as item}
         <li class="meeting-item">
           <FadeInAnimation>
-            {item.date}: <strong>{item.title}</strong> ({item.place}){@html item.members ? '<br>' : ''}
+            <span class="plan-title">{item.date}: <strong>{item.title}</strong> ({item.place}){@html item.members ? '<br>' : ''}</span>
             {#each item.members as member}
               <span class="member">
                 {#if friendInfo[member] !== undefined}
@@ -113,5 +113,9 @@
     border-radius: 50%;
     vertical-align: middle;
     transform: translateY(-2px);
+  }
+
+  .plan-title {
+    text-decoration: dotted underline;
   }
 </style>
