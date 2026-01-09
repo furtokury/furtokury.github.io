@@ -72,7 +72,7 @@
   }
 
   .business-card-image {
-    max-width: 250px;
+    max-width: 5cm;
     box-shadow: 0 0 20px #5b75317f;
   }
 
