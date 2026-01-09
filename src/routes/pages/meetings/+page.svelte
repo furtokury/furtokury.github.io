@@ -61,7 +61,7 @@
           <FadeInAnimation>
             {item.date}: <strong>{item.title}</strong> ({item.place}){@html item.members ? '<br>' : ''}
             {#each item.members as member}
-              <span>
+              <span class="member">
                 {#if friendInfo[member] !== undefined}
                   <a href={friendInfo[member].href} target="_blank"><img src={friendInfo[member].src} alt={member} title={member} class="profile-picture"></a>
                 {/if}
