@@ -25,8 +25,14 @@
   },
   {
     "name": "퍼픽",
-    "details": "토쿠",
+    "details": "토쿠 (캐릭터)",
     "url": "https://furpic.net/characters/2e6caabd-6b12-4031-82a0-5dd4e8723b5c/drawings",
+    "icon": "icon_furpic.svg"
+  },
+  {
+    "name": "퍼픽",
+    "details": "스치 (사용자)",
+    "url": "https://furpic.net/users/@junhg0211",
     "icon": "icon_furpic.svg"
   },
   {
