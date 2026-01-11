@@ -48,6 +48,7 @@
 
 <svelte:head>
   <meta property="og:title" content="Meetings" />
+  <meta name="twitter:title" content="Meetings" />
 </svelte:head>
 
 <Title>MEETINGS</Title>

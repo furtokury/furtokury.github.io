@@ -14,6 +14,11 @@
   });
 </script>
 
+<svelte:head>
+  <meta property="og:title" content="TOKU Contact" />
+  <meta name="twitter:title" content="TOKU Contact" />
+</svelte:head>
+
 <div class="container">
   <Title>CONTACT</Title>
   <div class="contacts">

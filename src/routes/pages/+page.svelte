@@ -16,6 +16,7 @@
 
 <svelte:head>
   <meta property="og:title" content="Pages" />
+  <meta name="twitter:title" content="Pages" />
 </svelte:head>
 
 <Title>PAGES</Title>

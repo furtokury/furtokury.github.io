@@ -26,6 +26,7 @@
 
 <svelte:head>
   <meta property="og:title" content="Business Cards" />
+  <meta name="twitter:title" content="Business Cards" />
 </svelte:head>
 
 <Title>BUSINESS CARDS</Title>

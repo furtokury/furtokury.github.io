@@ -42,6 +42,7 @@
 
 <svelte:head>
   <meta property="og:title" content="TOKU" />
+  <meta name="twitter:title" content="TOKU" />
 </svelte:head>
 
 <Banner />

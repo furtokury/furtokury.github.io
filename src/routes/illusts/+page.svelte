@@ -18,7 +18,8 @@
 </script>
 
 <svelte:head>
-  <meta name="og:title" content="Gallery" />
+  <meta property="og:title" content="Gallery" />
+  <meta name="twitter:title" content="Gallery" />
 </svelte:head>
 
 <div class="container">

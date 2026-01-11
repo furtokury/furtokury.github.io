@@ -19,16 +19,15 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://toku.shtelo.org/" />
   <meta property="og:image" content="https://toku.shtelo.org/images/icon.svg" />
-  <meta property="og:description" content="말차 족제비 토쿠 개인 웹사이트" />
+  <meta property="og:description" content="말차 족제비 토쿠" />
   <meta property="og:site_name" content="TOKU" />
   <meta property="og:locale" content="ko_KR" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TOKU" />
-  <meta name="twitter:description" content="말차 족제비 토쿠 개인 웹사이트" />
+  <meta name="twitter:description" content="말차 족제비 토쿠" />
   <meta name="twitter:image" content="https://toku.shtelo.org/images/icon.svg" />
   <meta name="keywords" content="TOKU, Toku, 말차 족제비, 개인 웹사이트, 웹사이트, 포트폴리오" />
   <meta name="author" content="furtokury" />
-  <meta name="description" content="말차 족제비 토쿠 개인 웹사이트" />
+  <meta name="description" content="말차 족제비 토쿠" />
   <meta name="theme-color" content="#5b7531" />
 </svelte:head>
 

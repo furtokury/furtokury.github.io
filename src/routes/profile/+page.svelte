@@ -4,6 +4,7 @@
 
 <svelte:head>
   <meta property="og:title" content="TOKU Profile" />
+  <meta name="twitter:title" content="TOKU Profile" />
 </svelte:head>
 
 <div class="header-skipper"></div>
