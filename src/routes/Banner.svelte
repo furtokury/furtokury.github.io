@@ -44,7 +44,7 @@
         {#each bannerImages as image, index}
           <button
             class="banner-overlay-navigation-button"
-            on:click={changeImageIndex(index)}
+            onclick={changeImageIndex(index)}
             aria-label={`Show banner image ${index + 1}`}
             class:active={index === currentImageIndex}
           >
