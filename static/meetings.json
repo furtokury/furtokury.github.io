@@ -188,17 +188,22 @@
         {
           "title": "퍼:레이드 2026",
           "date": "2026. 10. 10 - 11",
-          "place": "경기도 안산시"
+          "place": "경기도 안산시",
+          "href": "https://furraid.kr",
+          "type": "event"
         },
         {
           "title": "FURST CLASS : Paws Roastery",
           "date": "2026. 4. 4 - 5",
-          "place": "서울특별시 서대문구"
+          "place": "서울특별시 서대문구",
+          "href": "https://www.furstclass2025.com",
+          "type": "event"
         },
         {
           "title": "광주정모",
           "date": "2026. 2. 8 - 9",
           "place": "광주광역시 동구",
+          "type": "gathering",
           "members": [
             "Compass Cat (아르고)",
             "놀정찰병 (페리도)",
@@ -212,12 +217,14 @@
         {
           "title": "하울수프 26",
           "date": "2026. 1. 24",
-          "place": "경기도 수원시"
+          "place": "경기도 수원시",
+          "type": "event"
         },
         {
           "title": "가평",
           "date": "2026. 1. 15 - 16",
           "place": "경기도 가평군",
+          "type": "gathering",
           "members": [
             "Compass Cat (아르고)",
             "놀정찰병 (페리도)",
@@ -231,6 +238,7 @@
           "title": "여우와 여우 신년회",
           "date": "2026. 1. 3 - 4",
           "place": "서울특별시 구로구",
+          "type": "gathering",
           "members": [
             "라비",
             "퍼냐 (슈메이)",
@@ -251,6 +259,7 @@
           "title": "아르고 생일파티",
           "date": "2025. 12. 6 - 7",
           "place": "부산광역시 해운대구",
+          "type": "gathering",
           "members": [
             "Compass Cat (아르고)",
             "라비",
@@ -282,6 +291,7 @@
           "title": "아르고 언박싱 이벤트",
           "date": "2024. 8. 17 - 18",
           "place": "서울특별시 관악구",
+          "type": "gathering",
           "members": [
             "Compass Cat (아르고)",
             "칼라페",

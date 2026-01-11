@@ -61,7 +61,9 @@
       {#each year.items as item}
         <li class="meeting-item">
           <FadeInAnimation>
-            <span class="plan-title">{item.date}: <strong>{item.title}</strong> ({item.place}){@html item.members ? '<br>' : ''}</span>
+            <a href={item.href} target="_blank" class="plan-title-link">
+              <span class="plan-title">{item.date}: <span class="type-{item.type}">{item.title}</span> ({item.place}){@html item.members ? '<br>' : ''}</span>
+            </a>
             {#each item.members as member}
               <span class="member">
                 {#if friendInfo[member] !== undefined}
@@ -98,6 +100,11 @@
     line-height: 1.5;
   }
 
+  .plan-title-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .profile-picture {
     height: 16px;
     width: 16px;
@@ -110,5 +117,17 @@
 
   .plan-title {
     text-decoration: dotted underline;
+  }
+
+  .type-event {
+    font-weight: bold;
+  }
+
+  .type-gathering {
+    font-style: normal;
+  }
+
+  .type-workshop {
+    font-style: italic;
   }
 </style>
