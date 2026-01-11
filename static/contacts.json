@@ -24,6 +24,12 @@
     "icon": "icon_kakaotalk.svg"
   },
   {
+    "name": "퍼픽",
+    "details": "토쿠",
+    "url": "https://furpic.net/characters/2e6caabd-6b12-4031-82a0-5dd4e8723b5c/drawings",
+    "icon": "icon_furpic.svg"
+  },
+  {
     "name": "이메일",
     "details": "junhg0211@gmail.com",
     "url": "mailto:junhg0211@gmail.com",

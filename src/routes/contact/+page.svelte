@@ -46,9 +46,10 @@
     gap: 24px;
     margin: auto;
     width: fit-content;
+    max-width: 625px;
     margin-top: 48px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
   }
 
   .contact-item {
