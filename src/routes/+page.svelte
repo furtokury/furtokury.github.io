@@ -54,6 +54,10 @@
     </div>
     <div class="description-text">
       <div>“ 말차 족제비 토쿠 ”</div>
+      <div style="font-style: italic;">
+        토쿠의 생일은 2025년 1월 27일이고,
+        지금 <strong bind:this={ageSpan} on:mouseenter={ageSpanMouseEnter} on:mouseleave={ageSpanMouseLeave} style="text-decoration: dotted underline; font-variant-numeric: tabular-nums;"></strong>살이에요 🤗
+      </div>
       <div>
         안녕하세요! 저는 '토쿠'라는 이름으로 활동하는 말차 족제비 토쿠입니다.<br>
         제 이름은 일본어로 '풀다'를 의미하는 '토쿠'에서 유래되었습니다. 저는 다양한 창작 활동을 통해 여러분과 소통하고자 합니다.
@@ -66,14 +70,26 @@
         저는 제 작품을 통해 여러분과 소통하고, 새로운 아이디어를 공유하고자 합니다.<br>
         제 작업에 관심이 있으시다면 언제든지 연락해 주세요. 함께 창작의 즐거움을 나누고 싶습니다!
       </div>
-      <div>감사합니다!</div>
     </div>
   </div>
-</FadeInAnimation>
-<FadeInAnimation>
   <div class="container">
-    토쿠의 생일은 2025년 1월 27일이고,
-    토쿠는 지금 <strong bind:this={ageSpan} on:mouseenter={ageSpanMouseEnter} on:mouseleave={ageSpanMouseLeave} style="text-decoration: dotted underline; font-variant-numeric: tabular-nums;"></strong>살이에요 🤗
+    <div class="description-header">
+      <img src="/images/logo.svg" alt="TOKU Logo" width="15">
+      <div>A <strong>MAKER</strong></div>
+    </div>
+    <div class="description-text">
+      <div>
+        퍼슈트 제작은 저의 주요 활동 중 하나로, 다양한 재료와 기술을 활용하여 독특하고 창의적인 퍼슈트를 만듭니다.<br>
+        또한, 퍼슈팅 주변 용품과 굿즈 제작에도 관심이 많아, 팬들과 소통할 수 있는 다양한 아이템을 선보이고 있습니다.
+      </div>
+      <div>
+        저는 제 작품을 통해 여러분과 소통하고, 새로운 아이디어를 공유하고자 합니다.<br>
+        제 작업에 관심이 있으시다면 언제든지 연락해 주세요. 함께 창작의 즐거움을 나누고 싶습니다!
+      </div>
+      <div>
+        함께 마감을 하거나 퍼슈트 제작에 대해 이야기하고 싶으시다면 언제든지 <a href="https://discord.gg/G6CKPDSqNg">토쿠 스튜디오 디스코드 서버에 방문</a>해 주세요. ☺️
+      </div>
+    </div>
   </div>
 </FadeInAnimation>
 
@@ -109,5 +125,15 @@
   .description-text div {
     margin-bottom: 16px;
     line-height: 1.6;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: dotted underline;
+  }
+
+  a:hover {
+    font-weight: bold;
+    text-decoration: dashed underline;
   }
 </style>

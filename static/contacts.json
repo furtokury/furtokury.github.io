@@ -18,6 +18,12 @@
     "icon": "icon_discord.svg"
   },
   {
+    "name": "디스코드 서버",
+    "details": "TOKU STUDIO",
+    "url": "https://discord.gg/G6CKPDSqNg",
+    "icon": "icon_discord.svg"
+  },
+  {
     "name": "카카오톡 오픈채팅",
     "details": "furtokury",
     "url": "https://open.kakao.com/me/furtokury",

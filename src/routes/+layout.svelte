@@ -74,7 +74,9 @@
       </div>
     </div>
     <div class="footer-column">
-      <div class="footer-column-title">CONTACT</div>
+      <div class="footer-column-title">
+        <a href="/contact">CONTACT</a>
+      </div>
       <div class="footer-column-items">
         {#each contacts as contact}
           <div><a href="{contact.url}" target="_blank" rel="noopener">{contact.name}</a></div>
@@ -187,6 +189,10 @@
   .footer-column-title {
     margin-bottom: 8px;
     font-size: 12px;
+    color: #A9B58C;
+  }
+
+  .footer-column-title a {
     color: #A9B58C;
   }
 

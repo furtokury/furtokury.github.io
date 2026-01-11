@@ -1,7 +1,7 @@
-<div class="title"><slot></slot></div>
+<div class="page-title"><slot></slot></div>
 
 <style>
-.title {
+.page-title {
     font-size: 64px;
     font-weight: 900;
     margin-top: 96px;
