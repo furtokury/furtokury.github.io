@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { _ } from "svelte-i18n";
+  import { _, locale } from "svelte-i18n";
 
 	let { children } = $props();
 
@@ -45,6 +45,10 @@
         <div class="header-navigation-item"><a href="/pages">{$_("navigation.pages")}</a></div>
         <div class="header-navigation-item"><a href="/contact">{$_("navigation.contact")}</a></div>
       </div>
+      <select bind:value={$locale} class="language-select" aria-label="Select Language">
+        <option value="ko">한국어</option>
+        <option value="ja">日本語</option>
+      </select>
     </div>
   </div>
   <div class="header-footer"></div>
@@ -130,6 +134,23 @@
     display: flex;
     gap: 40px;
     align-items: center;
+  }
+
+  .header-navigation-item {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .language-select {
+    margin-left: auto;
+    background-color: #7f9a49;
+    border: none;
+    color: #faf7ea;
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
   }
 
   .header-footer {
