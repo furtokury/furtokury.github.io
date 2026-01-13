@@ -5,5 +5,5 @@ register("ja", () => import("$lib/languages/ja.json"));
 
 init({
   fallbackLocale: "ko",
-  initialLocale: "ja",
+  initialLocale: "ko",
 });
