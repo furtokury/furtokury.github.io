@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { _, locale } from "svelte-i18n";
+  import { _, locale, isLoading } from "svelte-i18n";
 
 	let { children } = $props();
 
@@ -32,69 +32,73 @@
   <meta name="theme-color" content="#5b7531" />
 </svelte:head>
 
-<div class="header">
-  <div class="header-container">
-    <div class="header-content">
-      <div class="header-logo">
-        <a href="/"><img src="/images/logo-beige.svg" style="height: 24px; transform: translateY(3px);"> TOKU</a>
+{#if $isLoading}
+  Loading...
+{:else}
+  <div class="header">
+    <div class="header-container">
+      <div class="header-content">
+        <div class="header-logo">
+          <a href="/"><img src="/images/logo-beige.svg" style="height: 24px; transform: translateY(3px);"> TOKU</a>
+        </div>
+        <div class="header-navigation">
+          <div class="header-navigation-item"><a href="/">{$_("navigation.home")}</a></div>
+          <div class="header-navigation-item"><a href="/profile">{$_("navigation.profile")}</a></div>
+          <div class="header-navigation-item"><a href="/illusts">{$_("navigation.illusts")}</a></div>
+          <div class="header-navigation-item"><a href="/pages">{$_("navigation.pages")}</a></div>
+          <div class="header-navigation-item"><a href="/contact">{$_("navigation.contact")}</a></div>
+        </div>
+        <select bind:value={$locale} class="language-select" aria-label="Select Language">
+          <option value="ko">한국어</option>
+          <option value="ja">日本語</option>
+        </select>
       </div>
-      <div class="header-navigation">
-        <div class="header-navigation-item"><a href="/">{$_("navigation.home")}</a></div>
-        <div class="header-navigation-item"><a href="/profile">{$_("navigation.profile")}</a></div>
-        <div class="header-navigation-item"><a href="/illusts">{$_("navigation.illusts")}</a></div>
-        <div class="header-navigation-item"><a href="/pages">{$_("navigation.pages")}</a></div>
-        <div class="header-navigation-item"><a href="/contact">{$_("navigation.contact")}</a></div>
+    </div>
+    <div class="header-footer"></div>
+    <div class="header-shadow"></div>
+  </div>
+  <div style="height: 64px;"></div>
+  {@render children()}
+  <div class="footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <div class="footer-column-title">NAVIGATION</div>
+        <div class="footer-column-items">
+          <div><a href="/">{$_("navigation.home")}</a></div>
+          <div><a href="/profile">{$_("navigation.profile")}</a></div>
+          <div><a href="/illusts">{$_("navigation.illusts")}</a></div>
+          <div><a href="/pages">{$_("navigation.pages")}</a></div>
+          <div><a href="/contact">{$_("navigation.contact")}</a></div>
+        </div>
       </div>
-      <select bind:value={$locale} class="language-select" aria-label="Select Language">
-        <option value="ko">한국어</option>
-        <option value="ja">日本語</option>
-      </select>
+      <div class="footer-column">
+        <div class="footer-column-title">
+          <a href="/contact">CONTACT</a>
+        </div>
+        <div class="footer-column-items">
+          {#each contacts as contact}
+            <div><a href="{contact.url}" target="_blank" rel="noopener">{$_(contact.name)}</a></div>
+          {/each}
+        </div>
+      </div>
+      <div class="footer-column">
+        <div class="footer-column-title">SHORTCUTS</div>
+        <div class="footer-column-items">
+          <div><a href="https://github.com/furtokury/furtokury.github.io">{$_("footer.shortcuts.repository")}</a></div>
+        </div>
+        <div class="footer-column-items">
+          <div><a href="https://me.shtelo.org/">{$_("footer.shortcuts.schpage")}</a></div>
+        </div>
+      </div>
+      <div class="footer-column">
+      </div>
+      <div class="footer-column footer-column-right">
+        <img src="/images/logo-beige.svg" alt="TOKU Logo" width="15">
+        <div class="footer-column-right-name">© 2025-{new Date().getFullYear()} TOKU.<br>All rights reserved.</div>
+      </div>
     </div>
   </div>
-  <div class="header-footer"></div>
-  <div class="header-shadow"></div>
-</div>
-<div style="height: 64px;"></div>
-{@render children()}
-<div class="footer">
-  <div class="footer-content">
-    <div class="footer-column">
-      <div class="footer-column-title">NAVIGATION</div>
-      <div class="footer-column-items">
-        <div><a href="/">{$_("navigation.home")}</a></div>
-        <div><a href="/profile">{$_("navigation.profile")}</a></div>
-        <div><a href="/illusts">{$_("navigation.illusts")}</a></div>
-        <div><a href="/pages">{$_("navigation.pages")}</a></div>
-        <div><a href="/contact">{$_("navigation.contact")}</a></div>
-      </div>
-    </div>
-    <div class="footer-column">
-      <div class="footer-column-title">
-        <a href="/contact">CONTACT</a>
-      </div>
-      <div class="footer-column-items">
-        {#each contacts as contact}
-          <div><a href="{contact.url}" target="_blank" rel="noopener">{$_(contact.name)}</a></div>
-        {/each}
-      </div>
-    </div>
-    <div class="footer-column">
-      <div class="footer-column-title">SHORTCUTS</div>
-      <div class="footer-column-items">
-        <div><a href="https://github.com/furtokury/furtokury.github.io">{$_("footer.shortcuts.repository")}</a></div>
-      </div>
-      <div class="footer-column-items">
-        <div><a href="https://me.shtelo.org/">{$_("footer.shortcuts.schpage")}</a></div>
-      </div>
-    </div>
-    <div class="footer-column">
-    </div>
-    <div class="footer-column footer-column-right">
-      <img src="/images/logo-beige.svg" alt="TOKU Logo" width="15">
-      <div class="footer-column-right-name">© 2025-{new Date().getFullYear()} TOKU.<br>All rights reserved.</div>
-    </div>
-  </div>
-</div>
+{/if}
 
 <style>
   .header {
