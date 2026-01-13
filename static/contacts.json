@@ -12,6 +12,12 @@
     "icon": "icon_x.svg"
   },
   {
+    "name": "contact.youtube.name",
+    "details": "@furtokury",
+    "url": "https://www.youtube.com/@furtokury",
+    "icon": "icon_youtube.svg"
+  },
+  {
     "name": "contact.discord.name",
     "details": "furtokury",
     "url": "https://discord.com/users/1392093280967200860",
