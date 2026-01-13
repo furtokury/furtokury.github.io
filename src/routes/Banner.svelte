@@ -62,7 +62,6 @@
     });
 
     bannerImageContainer.addEventListener("touchstart", (e) => {
-      e.preventDefault();
       dragging = true;
       lastChanged = new Date().getTime();
       mouseDownX = e.touches[0].clientX;
