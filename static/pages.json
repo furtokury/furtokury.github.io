@@ -22,5 +22,11 @@
     "icon": "person-fill",
     "title": "토쿠 프로필",
     "description": "토쿠의 캐릭터 컨셉과 프로필을 확인할 수 있습니다."
+  },
+  {
+    "url": "/branding",
+    "icon": "emoji-smile-fill",
+    "title": "토쿠 브랜드 가이드라인",
+    "description": "토쿠의 브랜드 아이덴티티와 디자인 가이드라인을 확인할 수 있습니다."
   }
 ]
