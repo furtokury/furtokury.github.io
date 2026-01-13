@@ -53,7 +53,18 @@
   }
 
   .images {
-    display: flex;
-    flex-wrap: wrap;
+    column-count: 3;
+  }
+
+  @media (max-width: 800px) {
+    .images {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .images {
+      column-count: 1;
+    }
   }
 </style>

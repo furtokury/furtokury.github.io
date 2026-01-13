@@ -50,7 +50,6 @@
 <style>
   .gallery-item {
     min-width: 250px;
-    background-color: white;
     background-size: 110%;
     background-position: center;
     position: relative;
@@ -58,8 +57,8 @@
     overflow: hidden;
     cursor: pointer;
     transition: transform 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     break-inside: avoid;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.3));
   }
 
   .gallery-item:hover {

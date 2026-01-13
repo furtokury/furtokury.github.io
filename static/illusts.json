@@ -3,6 +3,12 @@
     "year": 2026,
     "items": [
       {
+        "src": "export.png",
+        "title": "토쿠 채널아트",
+        "date": "2026. 1. 13",
+        "description": "그림: 토쿠 @furtokury"
+      },
+      {
         "src": "sheet.png",
         "title": "토쿠 캐릭터 시트",
         "date": "2026. 1. 7",
