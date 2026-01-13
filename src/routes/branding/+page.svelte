@@ -19,7 +19,7 @@
 <Title>BRAND ASSETS</Title>
 
 <div class="container">
-  <div class="header">심볼</div>
+  <div class="header">SYMBOL</div>
   <div class="paragraph">토쿠의 심볼은 토쿠의 눈을 형상화한 심볼로, 토쿠 브랜드의 정체성을 나타냅니다.</div>
   <div class="gallery logo-gallery">
     <div style="background-color: #FAF7EA;">
@@ -36,7 +36,7 @@
     </div>
   </div>
   <div class="paragraph-right"><a href="/assets/symbol.zip"><i class="bi bi-download"></i></a></div>
-  <div class="header">로고</div>
+  <div class="header">LOGO</div>
   <div class="paragraph">토쿠 캐릭터와 토쿠 스튜디오는 같은 심볼을 사용하여 로고를 형성합니다.</div>
   <div class="paragraph">레터링 로고에서 글씨체는 <b>Futura Bold</b>를 사용하지만, 편의상 <b>SUIT 900</b>을 사용할 수도 있습니다.</div>
   <div class="gallery logo-gallery">
@@ -48,7 +48,7 @@
     </div>
   </div>
   <div class="paragraph-right"><a href="/assets/logo.zip"><i class="bi bi-download"></i></a></div>
-  <div class="header">색상</div>
+  <div class="header">COLORS</div>
   <div class="paragraph">토쿠의 대표 색상은 자연을 연상시키는 녹색 계열입니다. 보조 색상으로는 베이지색과 갈색을 사용합니다.</div>
   <div class="gallery">
     <div style="background-color: #5b7531;" class="color-swatch">
@@ -64,7 +64,7 @@
       <div class="color-code">#D9AA8B</div>
     </div>
   </div>
-  <div class="header">법적 고지</div>
+  <div class="header">LEGAL GUIDELINES</div>
   <div class="paragraph">
     토쿠 로고와 심볼은 토쿠의 상표입니다. 무단 사용을 금지하며, 사용 시 반드시 출처를 명시해 주시기 바랍니다.
   </div>
