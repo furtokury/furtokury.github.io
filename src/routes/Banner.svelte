@@ -78,13 +78,14 @@
     });
 
     const interval = setInterval(() => {
-      if (bannerImages.length <= 1) return;
       if (dragging) { return; }
 
       if (bannerImageContainer) {
         bannerXOffset += (targetXOffset - bannerXOffset) * 0.03;
         bannerImageContainer.style.transform = `translateX(${bannerXOffset}px)`;
       }
+
+      if (bannerImages.length <= 1) return;
 
       if (new Date().getTime() - lastChanged > 5000) {
         currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
