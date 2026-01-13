@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { _ } from "svelte-i18n";
 
 	let { children } = $props();
 
@@ -38,21 +39,11 @@
         <a href="/"><img src="/images/logo-beige.svg" style="height: 24px; transform: translateY(3px);"> TOKU</a>
       </div>
       <div class="header-navigation">
-        <div class="header-navigation-item">
-          <a href="/">홈</a>
-        </div>
-        <div class="header-navigation-item">
-          <a href="/profile">프로필</a>
-        </div>
-        <div class="header-navigation-item">
-          <a href="/illusts">일러스트</a>
-        </div>
-        <div class="header-navigation-item">
-          <a href="/pages">페이지</a>
-        </div>
-        <div class="header-navigation-item">
-          <a href="/contact">연락처</a>
-        </div>
+        <div class="header-navigation-item"><a href="/">{$_("navigation.home")}</a></div>
+        <div class="header-navigation-item"><a href="/profile">{$_("navigation.profile")}</a></div>
+        <div class="header-navigation-item"><a href="/illusts">{$_("navigation.illusts")}</a></div>
+        <div class="header-navigation-item"><a href="/pages">{$_("navigation.pages")}</a></div>
+        <div class="header-navigation-item"><a href="/contact">{$_("navigation.contact")}</a></div>
       </div>
     </div>
   </div>
@@ -66,11 +57,11 @@
     <div class="footer-column">
       <div class="footer-column-title">NAVIGATION</div>
       <div class="footer-column-items">
-        <div><a href="/">홈</a></div>
-        <div><a href="/profile">프로필</a></div>
-        <div><a href="/illusts">일러스트</a></div>
-        <div><a href="/pages">페이지</a></div>
-        <div><a href="/contact">연락처</a></div>
+        <div><a href="/">{$_("navigation.home")}</a></div>
+        <div><a href="/profile">{$_("navigation.profile")}</a></div>
+        <div><a href="/illusts">{$_("navigation.illusts")}</a></div>
+        <div><a href="/pages">{$_("navigation.pages")}</a></div>
+        <div><a href="/contact">{$_("navigation.contact")}</a></div>
       </div>
     </div>
     <div class="footer-column">
@@ -79,17 +70,17 @@
       </div>
       <div class="footer-column-items">
         {#each contacts as contact}
-          <div><a href="{contact.url}" target="_blank" rel="noopener">{contact.name}</a></div>
+          <div><a href="{contact.url}" target="_blank" rel="noopener">{$_(contact.name)}</a></div>
         {/each}
       </div>
     </div>
     <div class="footer-column">
       <div class="footer-column-title">SHORTCUTS</div>
       <div class="footer-column-items">
-        <div><a href="https://github.com/furtokury/furtokury.github.io">GitHub 레포지토리</a></div>
+        <div><a href="https://github.com/furtokury/furtokury.github.io">{$_("footer.shortcuts.repository")}</a></div>
       </div>
       <div class="footer-column-items">
-        <div><a href="https://me.shtelo.org/">내골격 홈페이지</a></div>
+        <div><a href="https://me.shtelo.org/">{$_("footer.shortcuts.schpage")}</a></div>
       </div>
     </div>
     <div class="footer-column">

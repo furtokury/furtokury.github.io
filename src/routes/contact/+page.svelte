@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import FadeInAnimation from "../FadeInAnimation.svelte";
   import Title from "../Title.svelte";
+  import { _ } from "svelte-i18n";
 
   let contacts = $state([]);
 
@@ -28,7 +29,7 @@
           <a href={contact.url} target="_blank" rel="noopener noreferrer">
             <img src={'/images/' + contact.icon} alt={contact.name} class="contact-icon" />
             <div>
-              <div>{contact.name}</div>
+              <div>{$_(contact.name)}</div>
               <div>{contact.details}</div>
             </div>
           </a>
