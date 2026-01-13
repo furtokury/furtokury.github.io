@@ -1,5 +1,6 @@
 <script>
   import FadeInAnimation from "../FadeInAnimation.svelte";
+  import { _ } from "svelte-i18n";
 </script>
 
 <svelte:head>
@@ -17,21 +18,21 @@
       <div class="content">
         <ul>
           <li>
-            이름: 토쿠
+            {$_("profile.name")}
             <ul>
-              <li>영어: Toku</li>
-              <li>일본어: トク</li>
-              <li>중국어: 徒酷</li>
+              <li>{$_("profile.name.en")}</li>
+              <li>{$_("profile.name.ja")}</li>
+              <li>{$_("profile.name.cn")}</li>
             </ul>
           </li>
-          <li>종족: 족제비</li>
-          <li>성별: 수컷</li>
-          <li>키: 172cm</li>
-          <li>몸무게: 63kg</li>
-          <li>성격: 소심함, 호기심, 완벽주의</li>
-          <li>MBTI: ISTJ</li>
-          <li>좋아하는 것: 말차 라떼</li>
-          <li>싫어하는 것: 쓴 커피, 갑작스러운 질문</li>
+          <li>{$_("profile.species")}</li>
+          <li>{$_("profile.gender")}</li>
+          <li>{$_("profile.height")}</li>
+          <li>{$_("profile.weight")}</li>
+          <li>{$_("profile.personality")}</li>
+          <li>{$_("profile.mbti")}</li>
+          <li>{$_("profile.likes")}</li>
+          <li>{$_("profile.dislikes")}</li>
         </ul>
       </div>
     </div>
@@ -39,41 +40,22 @@
   <FadeInAnimation>
     <div class="section">
       <div class="title">APPEARANCE</div>
-      <div class="content">
-        토쿠는 부드러운 말차색 털을 가진 족제비이다.
-        눈은 어두운 녹색으로 빛나며, 항상 호기심 가득한 표정을 짓고 있다.
-        날씬한 체형에 민첩한 움직임을 자랑하며, 꼬리는 길고 풍성하여 균형을 잘 잡아준다.
-      </div>
-      <div class="content">
-        검은색 안경을 착용하고 있으며, 이는 토쿠의 한 가지에 집중하는 성격을 반영한다.
-        평소에는 검은색 티셔츠와 흰색 가운을 즐겨 입는다.
-      </div>
+      <div class="content">{$_("profile.appearance.paragraph1")}</div>
+      <div class="content">{$_("profile.appearance.paragraph2")}</div>
     </div>
   </FadeInAnimation>
   <FadeInAnimation>
     <div class="section">
       <div class="title">PERSONALITY</div>
-      <div class="content">
-        토쿠는 매우 호기심 많고 창의적인 성격을 가지고 있다.
-        새로운 것에 도전하는 것을 좋아하며, 항상 주변을 탐험하고 배우려는 열정을 지니고 있다.
-      </div>
-      <div class="content">
-        토쿠는 사회생활을 어려워하지만, 친한 친구들과 함께 있을 때는 매우 다정하고 유쾌한 모습을 보인다.
-        또한, 문제 해결 능력이 뛰어나며, 어려운 상황에서도 침착하게 대처하는 모습을 보인다.
-      </div>
+      <div class="content">{$_("profile.personality.paragraph1")}</div>
+      <div class="content">{$_("profile.personality.paragraph2")}</div>
     </div>
   </FadeInAnimation>
   <FadeInAnimation>
     <div class="section">
       <div class="title">HOBBIES</div>
-      <div class="content">
-        토쿠는 손재주가 뛰어나며, 다양한 예술 창작 활동을 즐긴다.
-        또한, 토쿠는 자연을 탐험하는 것을 좋아하며, 산책이나 꽃 구경을 즐긴다.
-      </div>
-      <div class="content">
-        토쿠는 맛있는 음식을 즐기며, 특히 말차 라떼를 좋아한다.
-        요즘은 연구소에서 새로운 말차 음료를 개발하는 데에 관심을 가지고 있다.
-      </div>
+      <div class="content">{$_("profile.hobbies.paragraph1")}</div>
+      <div class="content">{$_("profile.hobbies.paragraph2")}</div>
     </div>
   </FadeInAnimation>
 </div>

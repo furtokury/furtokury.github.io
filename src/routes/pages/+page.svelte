@@ -2,6 +2,7 @@
   import "bootstrap-icons/font/bootstrap-icons.css";
   import { onMount } from "svelte";
   import Title from "../Title.svelte";
+  import { _ } from "svelte-i18n";
 
   let pages = $state([]);
 
@@ -24,8 +25,8 @@
   <div class="pages-list">
     {#each pages as page}
       <a href={page.url} class="page-entry">
-        <div class="entry-title"><i class="bi bi-{page.icon}"></i> {page.title}</div>
-        <div class="entry-description">{page.description}</div>
+        <div class="entry-title"><i class="bi bi-{page.icon}"></i> {$_(page.title)}</div>
+        <div class="entry-description">{$_(page.description)}</div>
       </a>
     {/each}
   </div>

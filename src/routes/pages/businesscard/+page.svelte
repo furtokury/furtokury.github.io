@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import FadeInAnimation from "../../FadeInAnimation.svelte";
   import Title from "../../Title.svelte";
+  import { _ } from "svelte-i18n";
 
   async function getBusinessCardData(n) {
     const result = {count: 0};
@@ -41,8 +42,7 @@
           <img src="/images/business-card-1-back.svg" alt="Business Card Back #1" class="business-card-image" />
         </div>
         <div class="image-container-description">
-          2026년 1월 토쿠가 직접 디자인하여 100장 한정으로 만든 토쿠의 첫번째 명함입니다.<br>
-          토쿠에게 직접 받은 명함에는 토쿠의 수필 서명과 명함 번호가 적혀 있습니다.
+          {$_("businesscards.illust1.description")}
         </div>
       </FadeInAnimation>
     </div>
