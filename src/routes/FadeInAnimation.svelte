@@ -6,6 +6,8 @@
   export let offset = 20;      // px
   export let duration = 600;   // ms
 
+  export let style = '';
+
   let container;
   let observer;
 
@@ -39,6 +41,7 @@
     --delay: {delay}ms;
     --offset: {offset}px;
     --duration: {duration}ms;
+    {style}
   "
 >
   <slot />
