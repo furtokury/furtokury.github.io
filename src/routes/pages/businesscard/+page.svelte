@@ -4,24 +4,15 @@
   import Title from "../../Title.svelte";
   import { _ } from "svelte-i18n";
 
-  async function getBusinessCardData(n) {
-    const result = {count: 0};
-
-    const data = await fetch(`/businesscard/${n}.json`)
-      .then((response) => response.json());
-
-    for (let i = 0; i < data.length; i++) {
-      const datum = data[i];
-      result[datum.id] = datum;
-      result.count = Math.max(result.count, datum.id);
-    }
-
-    return result; }
-
-  let businessCard1Data = $state({});
+  let businessCard1Data = $state({owners: [], reserveds: []});
 
   onMount(() => {
-    getBusinessCardData(1).then((data) => businessCard1Data = data);
+    fetch(`/businesscard/1.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        businessCard1Data = data;
+        console.log(data);
+      });
   });
 </script>
 
@@ -50,12 +41,20 @@
       <FadeInAnimation>
         <div class="owners-title">Owners</div>
         <div class="owners-list">
-          {#each Array(businessCard1Data.count).fill(0).map((_, i) => i + 1) as i}
-            {#if businessCard1Data[i]}
-              <div class="owner-entry">
-                #{i} <strong>{businessCard1Data[i].name}</strong>
-              </div>
-            {/if}
+          {#each businessCard1Data.owners as _, i}
+            <div class="owner-entry">
+              #{businessCard1Data.owners[i].id} <strong>{businessCard1Data.owners[i].name}</strong>
+            </div>
+          {/each}
+        </div>
+      </FadeInAnimation>
+      <FadeInAnimation>
+        <div class="owners-title">Reserveds</div>
+        <div class="owners-list">
+          {#each businessCard1Data.reserveds as _, i}
+            <div class="owner-entry">
+              #{businessCard1Data.reserveds[i].id} <strong>{businessCard1Data.reserveds[i].name}</strong>
+            </div>
           {/each}
         </div>
       </FadeInAnimation>
@@ -117,6 +116,7 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 12px;
+    margin-top: 20px;
   }
 
   .owners-list {
