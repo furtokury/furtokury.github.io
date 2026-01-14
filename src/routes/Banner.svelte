@@ -52,7 +52,6 @@
       lastChanged = new Date().getTime();
 
       if (dragging) {
-        e.preventDefault();
         const touch = e.touches[0];
         const dx = touch.clientX - mouseDownX;
         mouseDownX = touch.clientX;
