@@ -1,6 +1,22 @@
 {
   "friends": [
     {
+      "name": "오백비",
+      "twitter": "furnemb"
+    },
+    {
+      "name": "루트린",
+      "twitter": "Lutrin_F"
+    },
+    {
+      "name": "이온",
+      "twitter": "EON_SD"
+    },
+    {
+      "name": "청화",
+      "twitter": "chung_hwa64"
+    },
+    {
       "name": "감토",
       "twitter": "Gamto_Artwork"
     },
@@ -253,9 +269,10 @@
           "members": [
             "Compass Cat (아르고)",
             "놀정찰병 (페리도)",
-            "루트린 (이온)",
+            "이온 (루트린)",
             "청화",
             "치효",
+            "오백비",
             "하월"
           ]
         },
