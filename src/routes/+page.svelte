@@ -64,7 +64,9 @@
     <div class="description-text">
       <div>{$_("index.furtokury.quote")}</div>
       <div style="font-style: italic;">
-        {$_("index.furtokury.age1")}<strong bind:this={ageSpan} on:mouseenter={ageSpanMouseEnter} on:mouseleave={ageSpanMouseLeave} style="text-decoration: dotted underline; font-variant-numeric: tabular-nums;"></strong>{$_("index.furtokury.age2")}
+        {$_("index.furtokury.age1")}
+        <strong bind:this={ageSpan} on:mouseenter={ageSpanMouseEnter} on:mouseleave={ageSpanMouseLeave} style="text-decoration: dotted underline; font-variant-numeric: tabular-nums;"></strong>
+        {$_("index.furtokury.age2")}
       </div>
       <div>{$_("index.furtokury.intro1")}</div>
       <div>{$_("index.furtokury.intro2")}</div>
@@ -154,6 +156,7 @@
 
   .link:hover {
     text-decoration: underline;
+    font-weight: bold;
   }
 
   .news-list {
