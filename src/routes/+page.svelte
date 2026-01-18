@@ -104,13 +104,6 @@
     <div class="description-text">
       <div>{$_("index.maker.paragraph1")}</div>
       <div>{$_("index.maker.paragraph2")}</div>
-      <div>
-        {$_("index.maker.paragraph3.1")}
-        <a href="https://discord.gg/G6CKPDSqNg" class="link" target="_blank" rel="noopener noreferrer">
-        {$_("index.maker.paragraph3.2")}
-        </a>
-        {$_("index.maker.paragraph3.3")}
-      </div>
     </div>
   </div>
 </FadeInAnimation>
