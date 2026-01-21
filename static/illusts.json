@@ -2,6 +2,12 @@
   {
     "year": 2026,
     "items": [
+        {
+          "src": "snapshot.png",
+          "title": "금목서",
+          "date": "2026. 1. 21",
+          "description": "그림: 토쿠 @furtokury"
+        },
       {
         "src": "export2.png",
         "title": "토쿠",
