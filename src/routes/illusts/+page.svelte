@@ -15,6 +15,14 @@
         console.error("Error loading illusts data:", error);
       });
   });
+
+  function getIllustURL(src) {
+    if (src.startsWith('http')) {
+      return src;
+    }
+
+    return '/illusts/' + src;
+  }
 </script>
 
 <svelte:head>
@@ -28,7 +36,7 @@
     <div class="timestamp">{year.year}</div>
     <div class="images">
       {#each year.items as item}
-        <GalleryItem src={'/illusts/' + item.src} title={item.title} date={item.date}>
+        <GalleryItem src={getIllustURL(item.src)} title={item.title} date={item.date}>
           {item.description}
         </GalleryItem>
       {/each}

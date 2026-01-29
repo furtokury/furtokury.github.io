@@ -2,12 +2,18 @@
   {
     "year": 2026,
     "items": [
-        {
-          "src": "snapshot.png",
-          "title": "금목서",
-          "date": "2026. 1. 21",
-          "description": "그림: 토쿠 @furtokury"
-        },
+      {
+        "src": "https://pbs.twimg.com/media/G_raRgFbAAMOpHv?format=jpg&name=medium",
+        "title": "퍼냐 01.27 방송 리퀘 이벤트",
+        "date": "2026. 1. 27",
+        "description": "그림: 퍼냐 @furrnya"
+      },
+      {
+        "src": "snapshot.png",
+        "title": "금목서",
+        "date": "2026. 1. 21",
+        "description": "그림: 토쿠 @furtokury"
+      },
       {
         "src": "export2.png",
         "title": "토쿠",
