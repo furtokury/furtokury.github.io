@@ -1,6 +1,18 @@
 {
   "friends": [
     {
+      "name": "KEN",
+      "twitter": "K3N0205"
+    },
+    {
+      "name": "윤이랑",
+      "twitter": "wolfer73"
+    },
+    {
+      "name": "RYU",
+      "twitter": "Jadetiger_RYU"
+    },
+    {
       "name": "오백비",
       "twitter": "furnemb"
     },
@@ -250,8 +262,11 @@
             "하월",
             "아울메이즈",
             "검다냥",
-            "망뿡",
-            "감토"
+            "망뿡 (아로)",
+            "감토",
+            "윤이랑",
+            "KEN",
+            "라미 (RYU)"
           ]
         },
         {
