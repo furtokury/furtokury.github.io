@@ -237,6 +237,15 @@
           "type": "event"
         },
         {
+          "title": "펜션팟",
+          "date": "2026. 5. 16 - 17",
+          "place": "경기도 가평군",
+          "type": "gathering",
+          "members": [
+            "Compass Cat (아르고)"
+          ]
+        },
+        {
           "title": "FURST CLASS : Paws Roastery",
           "date": "2026. 4. 4 - 5",
           "place": "서울특별시 서대문구",
