@@ -237,19 +237,30 @@
           "type": "event"
         },
         {
+          "title": "FURST CLASS – Trip",
+          "date": "2026. 6. 20 - 21",
+          "place": "경기도 시흥시",
+          "href": "https://furst-class.com/",
+          "type": "event"
+        },
+        {
           "title": "펜션팟",
-          "date": "2026. 5. 16 - 17",
+          "date": "2026. 5. 23 - 24",
           "place": "경기도 가평군",
           "type": "gathering",
           "members": [
-            "Compass Cat (아르고)"
+            "Compass Cat (아르고)",
+            "놀정찰병 (페리도)",
+            "승호",
+            "하월",
+            "치효"
           ]
         },
         {
           "title": "FURST CLASS : Paws Roastery",
           "date": "2026. 4. 4 - 5",
           "place": "서울특별시 서대문구",
-          "href": "https://www.furstclass2025.com",
+          "href": "https://furst-class.com/",
           "type": "event"
         },
         {
