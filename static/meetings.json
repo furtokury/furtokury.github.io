@@ -237,6 +237,19 @@
           "type": "event"
         },
         {
+          "title": "대부도 펜션 파티",
+          "date": "2026. 7. 26 - 27",
+          "place": "경기도 안산시",
+          "type": "gathering",
+          "members": [
+            "Compass Cat (아르고)",
+            "하월",
+            "라비",
+            "지크",
+            "사토루 (설피)"
+          ]
+        },
+        {
           "title": "FURST CLASS – Trip SUMMER",
           "date": "2026. 6. 20 - 21",
           "place": "경기도 시흥시",
