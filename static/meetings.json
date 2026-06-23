@@ -1,6 +1,18 @@
 {
   "friends": [
     {
+      "name": "지크",
+      "twitter": "dovmfdoqjffo"
+    },
+    {
+      "name": "사토루",
+      "twitter": "Leopard_Sato_"
+    },
+    {
+      "name": "말랑곰",
+      "twitter": "mojjibread"
+    },
+    {
       "name": "로디",
       "twitter": "tunguska1148"
     },
@@ -250,7 +262,9 @@
             "하월",
             "라비",
             "지크",
-            "사토루 (설피)"
+            "사토루 (설피)",
+            "퍼냐 (슈메이)",
+            "말랑곰"
           ]
         },
         {
