@@ -235,6 +235,13 @@
       "items": [
         {
           "title": "JMoF 2027: Lost in Trasit — セントレア漂流記",
+          "date": "2027. 2. 27 - 28",
+          "place": "경기도 고양시",
+          "href": "https://furryjoa.com/",
+          "type": "event"
+        },
+        {
+          "title": "JMoF 2027: Lost in Trasit — セントレア漂流記",
           "date": "2027. 1. 8 - 10",
           "place": "日本愛知県常滑市",
           "href": "https://www.jmof.jp/",
@@ -264,6 +271,8 @@
             "지크",
             "사토루 (설피)",
             "퍼냐 (슈메이)",
+            "나른한강",
+            "Multeinn",
             "말랑곰"
           ]
         },
