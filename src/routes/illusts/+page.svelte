@@ -1,5 +1,5 @@
 <script lang="ts">
-  import GalleryItem from "./GalleryItem.svelte";
+  import GalleryItem from "../GalleryItem.svelte";
   import { onMount } from "svelte";
   import Title from "../Title.svelte";
 

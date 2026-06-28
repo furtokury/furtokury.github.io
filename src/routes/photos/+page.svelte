@@ -1,0 +1,78 @@
+<script lang="ts">
+  import GalleryItem from "../GalleryItem.svelte";
+  import { onMount } from "svelte";
+  import Title from "../Title.svelte";
+
+  let photosData = [];
+
+  onMount(() => {
+    fetch("/photos.json")
+      .then((response) => response.json())
+      .then((data) => {
+        photosData = data;
+      })
+      .catch((error) => {
+        console.error("Error loading photos data:", error);
+      });
+  });
+
+  function getIllustURL(src) {
+    if (src.startsWith('http')) {
+      return src;
+    }
+
+    return '/photos/' + src;
+  }
+</script>
+
+<svelte:head>
+  <meta property="og:title" content="Gallery" />
+  <meta name="twitter:title" content="Gallery" />
+</svelte:head>
+
+<div class="container">
+  <Title>PHOTOS</Title>
+  {#each photosData as year}
+    <div class="timestamp">{year.year}</div>
+    <div class="images">
+      {#each year.items as item}
+        <GalleryItem src={getIllustURL(item.src)} title={item.title} date={item.date}>
+          {item.description}
+        </GalleryItem>
+      {/each}
+    </div>
+  {/each}
+</div>
+
+<style>
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .timestamp {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 64px;
+    margin-bottom: 24px;
+    color: #5b7531;
+    text-shadow: 0 1px 0 #a9b58c;
+  }
+
+  .images {
+    column-count: 3;
+  }
+
+  @media (max-width: 800px) {
+    .images {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .images {
+      column-count: 1;
+    }
+  }
+</style>

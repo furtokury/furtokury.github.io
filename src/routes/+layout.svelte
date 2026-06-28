@@ -45,6 +45,7 @@
           <div class="header-navigation-item"><a href="/">{$_("navigation.home")}</a></div>
           <div class="header-navigation-item"><a href="/profile">{$_("navigation.profile")}</a></div>
           <div class="header-navigation-item"><a href="/illusts">{$_("navigation.illusts")}</a></div>
+          <div class="header-navigation-item"><a href="/photos">{$_("navigation.photos")}</a></div>
           <div class="header-navigation-item"><a href="/pages">{$_("navigation.pages")}</a></div>
           <div class="header-navigation-item"><a href="/contact">{$_("navigation.contact")}</a></div>
         </div>
@@ -68,6 +69,7 @@
           <div><a href="/">{$_("navigation.home")}</a></div>
           <div><a href="/profile">{$_("navigation.profile")}</a></div>
           <div><a href="/illusts">{$_("navigation.illusts")}</a></div>
+          <div><a href="/photos">{$_("navigation.photos")}</a></div>
           <div><a href="/pages">{$_("navigation.pages")}</a></div>
           <div><a href="/contact">{$_("navigation.contact")}</a></div>
         </div>

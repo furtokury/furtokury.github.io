@@ -18,6 +18,12 @@
     "description": "pages.illusts.description"
   },
   {
+    "url": "/photos",
+    "icon": "image-fill",
+    "title": "pages.photos.title",
+    "description": "pages.photos.description"
+  },
+  {
     "url": "/profile",
     "icon": "person-fill",
     "title": "pages.profile.title",
