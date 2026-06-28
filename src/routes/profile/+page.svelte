@@ -42,6 +42,7 @@
       <div class="title">APPEARANCE</div>
       <div class="content">{$_("profile.appearance.paragraph1")}</div>
       <div class="content">{$_("profile.appearance.paragraph2")}</div>
+      <div class="content">{$_("profile.appearance.paragraph3")}</div>
     </div>
   </FadeInAnimation>
   <FadeInAnimation>
