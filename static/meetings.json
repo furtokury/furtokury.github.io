@@ -1,6 +1,42 @@
 {
   "friends": [
     {
+      "name": "달리",
+      "twitter": "dali_artwork"
+    },
+    {
+      "name": "테오",
+      "twitter": "Teo_The_Lion"
+    },
+    {
+      "name": "민트",
+      "twitter": "Minte0412"
+    },
+    {
+      "name": "아스터",
+      "twitter": "Aster_Byukhwa"
+    },
+    {
+      "name": "벽화",
+      "twitter": "Aster_Byukhwa"
+    },
+    {
+      "name": "스캎",
+      "twitter": "Scarf_Scarf"
+    },
+    {
+      "name": "KINTO",
+      "twitter": "Kinto117"
+    },
+    {
+      "name": "NAYO",
+      "twitter": "NAYOsuit"
+    },
+    {
+      "name": "Nova",
+      "twitter": "Nova0038"
+    },
+    {
       "name": "지크",
       "twitter": "dovmfdoqjffo"
     },
@@ -274,6 +310,21 @@
             "나른한강",
             "Multeinn",
             "말랑곰"
+          ]
+        },
+        {
+          "title": "달리굴 모임",
+          "date": "2026. 7. 8 - 9",
+          "place": "경기도 고양시",
+          "type": "gathering",
+          "members": [
+            "달리",
+            "민트 (테오)",
+            "벽화 (아스터)",
+            "스캎",
+            "KINTO",
+            "NAYO",
+            "Nova"
           ]
         },
         {
