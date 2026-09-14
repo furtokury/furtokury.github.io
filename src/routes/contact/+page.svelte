@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import FadeInAnimation from "../FadeInAnimation.svelte";
   import Title from "../Title.svelte";
   import { _ } from "svelte-i18n";
 
-  let contacts = $state([]);
+  type Contact = { url: string; icon: string; name: string; details: string };
+  let contacts: Contact[] = $state([]);
 
   onMount(() => {
     fetch("/contacts.json")

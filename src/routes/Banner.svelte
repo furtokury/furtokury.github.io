@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
   import { onMount, tick } from 'svelte';
 
-  let bannerImages = $state([]);
+  type BannerImage = { url: string; alt?: string };
+  let bannerImages: BannerImage[] = $state([]);
 
   let currentImageIndex = $state(0);
   let currentImage = $derived(bannerImages[currentImageIndex] || {});
 
-  function changeImageIndex(index) {
+  function changeImageIndex(index: number) {
     return () => {
       currentImageIndex = index;
       lastChanged = new Date().getTime();
@@ -16,10 +17,10 @@
   let bannerXOffset = 0;
   let width = 0;
   let targetXOffset = $derived(-currentImageIndex * width);
-  let bannerImageContainer;
-  let bannerLoadingBarFills = $state([]);
+  let bannerImageContainer: HTMLDivElement;
+  let bannerLoadingBarFills: HTMLDivElement[] = $state([]);
 
-  let bannerImageElements = $state([]);
+  let bannerImageElements: HTMLImageElement[] = $state([]);
   function resize() {
     width = window.innerWidth;
     bannerImageElements.forEach((img, i) => {
@@ -33,24 +34,12 @@
 
   let dragging = false;
 
-  onMount(async () => {
-    await fetch("/bannerimages.json")
-      .then((response) => response.json())
-      .then((data) => {
-        bannerImages = data;
-      });
+  onMount(() => {
+    let interval: ReturnType<typeof setInterval> | undefined;
+    let disposed = false;
 
-    await tick();
-
-    document.addEventListener("resize", resize);
-    window.addEventListener("resize", resize);
-    resize();
-
-    let mouseDownX = 0;
-
-    bannerImageContainer.addEventListener("touchmove", (e) => {
-      lastChanged = new Date().getTime();
-
+    const handleTouchMove = (e: TouchEvent) => {
+      lastChanged = Date.now();
       if (dragging) {
         const touch = e.touches[0];
         const dx = touch.clientX - mouseDownX;
@@ -58,24 +47,40 @@
         bannerXOffset += dx;
         bannerImageContainer.style.transform = `translateX(${bannerXOffset}px)`;
       }
-    });
-
-    bannerImageContainer.addEventListener("touchstart", (e) => {
+    };
+    const handleTouchStart = (e: TouchEvent) => {
       dragging = true;
-      lastChanged = new Date().getTime();
+      lastChanged = Date.now();
       mouseDownX = e.touches[0].clientX;
-    });
-
-    bannerImageContainer.addEventListener("touchend", (e) => {
+    };
+    const handleTouchEnd = () => {
       dragging = false;
-      lastChanged = new Date().getTime();
-
+      lastChanged = Date.now();
       if (bannerImages.length <= 1) return;
       const newIndex = Math.round(-bannerXOffset / width);
       currentImageIndex = Math.min(Math.max(newIndex, 0), bannerImages.length - 1);
-    });
+    };
+    let mouseDownX = 0;
 
-    const interval = setInterval(() => {
+    const initialize = async () => {
+      await fetch("/bannerimages.json")
+      .then((response) => response.json())
+      .then((data) => {
+        bannerImages = data;
+      });
+
+      await tick();
+      if (disposed) return;
+
+    document.addEventListener("resize", resize);
+    window.addEventListener("resize", resize);
+    resize();
+
+      bannerImageContainer.addEventListener("touchmove", handleTouchMove);
+      bannerImageContainer.addEventListener("touchstart", handleTouchStart);
+      bannerImageContainer.addEventListener("touchend", handleTouchEnd);
+
+      interval = setInterval(() => {
       if (dragging) { return; }
 
       if (bannerImageContainer) {
@@ -98,11 +103,19 @@
           }
         }
       }
-    });
+      });
+    };
+
+    void initialize();
 
     return () => {
-      clearInterval(interval);
+      disposed = true;
+      if (interval) clearInterval(interval);
       document.removeEventListener("resize", resize);
+      window.removeEventListener("resize", resize);
+      bannerImageContainer?.removeEventListener("touchmove", handleTouchMove);
+      bannerImageContainer?.removeEventListener("touchstart", handleTouchStart);
+      bannerImageContainer?.removeEventListener("touchend", handleTouchEnd);
     };
   });
 </script>
@@ -114,7 +127,6 @@
         src={image.url}
         alt={image.alt || `Banner Image ${index + 1}`}
         class="banner-image"
-        key={image.url}
         bind:this={bannerImageElements[index]}
       />
     {/each}

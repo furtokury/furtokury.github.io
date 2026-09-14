@@ -3,7 +3,8 @@
   import { onMount } from "svelte";
   import Title from "../Title.svelte";
 
-  let photosData = [];
+  type GalleryYear = { year: string | number; items: { src: string; title: string; date: string; description: string }[] };
+  let photosData: GalleryYear[] = [];
 
   onMount(() => {
     fetch("/photos.json")
@@ -16,7 +17,7 @@
       });
   });
 
-  function getIllustURL(src) {
+  function getIllustURL(src: string) {
     if (src.startsWith('http')) {
       return src;
     }

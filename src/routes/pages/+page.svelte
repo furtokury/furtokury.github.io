@@ -1,10 +1,11 @@
-<script>
+<script lang="ts">
   import "bootstrap-icons/font/bootstrap-icons.css";
   import { onMount } from "svelte";
   import Title from "../Title.svelte";
   import { _ } from "svelte-i18n";
 
-  let pages = $state([]);
+  type Page = { url: string; icon: string; title: string; description: string };
+  let pages: Page[] = $state([]);
 
   onMount(() => {
     fetch("/pages.json")

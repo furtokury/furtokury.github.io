@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
 
-  export let src;
+  export let src: string;
   export let title = "";
   export let date = "";
 
@@ -29,14 +29,14 @@
   }
 </script>
 
-<div class="gallery-item" style="background-image: url({src}); height: {height}px;" on:click={toggleFloatViewer}>
+<div class="gallery-item" role="button" tabindex="0" style="background-image: url({src}); height: {height}px;" onclick={toggleFloatViewer} onkeydown={(event) => (event.key === 'Enter' || event.key === ' ') && toggleFloatViewer()}>
   <div class="overlay">
     <div class="title">{title}</div>
     <div class="date">{date}</div>
   </div>
 </div>
 
-<div class="float-viewer" on:click={toggleFloatViewer} bind:this={floatViewer}>
+<div class="float-viewer" role="button" tabindex="0" onclick={toggleFloatViewer} onkeydown={(event) => event.key === 'Escape' && toggleFloatViewer()} bind:this={floatViewer}>
   <img {src} alt={title} class="float-viewer-image" />
   <div class="float-viewer-metadata">
     <div class="float-viewer-title">{title}</div>

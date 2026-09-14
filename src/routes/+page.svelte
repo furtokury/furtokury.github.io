@@ -1,18 +1,18 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import FadeInAnimation from "./FadeInAnimation.svelte";
   import Banner from "./Banner.svelte";
   import { _ } from "svelte-i18n";
 
-  let ageSpan;
+  let ageSpan: HTMLElement;
 
   const birthDate = new Date("2025-01-27T00:00:00"); // 토쿠의 생일
   let decimalPoints = 0;
   let decimalPointsTarget = 0;
 
-  function calculateAge(birthDate) {
+  function calculateAge(birthDate: Date) {
     const today = new Date();
-    const age = (today - birthDate) / (1000 * 60 * 60 * 24 * 365.25);
+    const age = (today.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
     return age.toFixed(decimalPoints);
   }
 
@@ -24,7 +24,8 @@
     decimalPointsTarget = 0;
   }
 
-  let news = $state([]);
+  type NewsItem = { url: string; title: string; date: string; content: string };
+  let news: NewsItem[] = $state([]);
 
   onMount(() => {
     const interval = setInterval(() => {
@@ -65,7 +66,7 @@
       <div>{$_("index.furtokury.quote")}</div>
       <div style="font-style: italic;">
         {$_("index.furtokury.age1")}
-        <strong bind:this={ageSpan} on:mouseenter={ageSpanMouseEnter} on:mouseleave={ageSpanMouseLeave} style="text-decoration: dotted underline; font-variant-numeric: tabular-nums;"></strong>
+        <strong bind:this={ageSpan} onmouseenter={ageSpanMouseEnter} onmouseleave={ageSpanMouseLeave} style="text-decoration: dotted underline; font-variant-numeric: tabular-nums;"></strong>
         {$_("index.furtokury.age2")}
       </div>
       <div>{$_("index.furtokury.intro1")}</div>
@@ -123,10 +124,6 @@
     }
   }
 
-  .description img {
-    filter: drop-shadow(0 2px 0 #A9B58C);
-  }
-
   .description-header {
     font-size: 52px;
     margin-bottom: 40px;
@@ -140,16 +137,6 @@
   .description-text div {
     margin-bottom: 16px;
     line-height: 1.6;
-  }
-
-  .link {
-    color: inherit;
-    text-decoration: dotted underline;
-  }
-
-  .link:hover {
-    text-decoration: underline;
-    font-weight: bold;
   }
 
   .news-list {

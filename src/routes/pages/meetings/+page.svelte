@@ -1,12 +1,18 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import FadeInAnimation from "../../FadeInAnimation.svelte";
   import Title from "../../Title.svelte";
 
-  let meetingsData = $state([]);
-  let friendInfo = {};
+  type Friend = { name: string; twitter: string };
+  type Meeting = { href: string; date: string; type: string; title: string; place: string; members?: string[] };
+  type MeetingYear = { year: string | number; items: Meeting[] };
+  type MeetingsData = { friends: Friend[]; meetings: MeetingYear[] };
+  type FriendLink = { src: string; href: string };
 
-  function getFriendByName(name) {
+  let meetingsData: MeetingsData = $state({ friends: [], meetings: [] });
+  let friendInfo: Record<string, FriendLink> = {};
+
+  function getFriendByName(name: string | null | undefined) {
     if (!name) return;
 
     for (const friend of meetingsData.friends) {
@@ -64,12 +70,12 @@
             <a href={item.href} target="_blank" class="plan-title-link">
               <span class="plan-title">{item.date}: <span class="type-{item.type}">{item.title}</span> ({item.place}){@html item.members ? '<br>' : ''}</span>
             </a>
-            {#each item.members as member}
+            {#each item.members ?? [] as member, memberIndex}
               <span class="member">
                 {#if friendInfo[member] !== undefined}
                   <a href={friendInfo[member].href} target="_blank"><img src={friendInfo[member].src} alt={member} title={member} class="profile-picture"></a>
                 {/if}
-                {member}{item.members.indexOf(member) !== item.members.length - 1 ? ', ' : ''}
+                {member}{memberIndex !== (item.members?.length ?? 0) - 1 ? ', ' : ''}
               </span>
             {/each}
           </FadeInAnimation>

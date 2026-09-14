@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
 
   export let delay = 0;        // ms
@@ -8,20 +8,21 @@
 
   export let style = '';
 
-  let container;
-  let observer;
+  let container: HTMLDivElement;
+  let observer: IntersectionObserver;
 
   onMount(() => {
     observer = new IntersectionObserver(
       ([entry]) => {
+        const target = entry.target as HTMLElement;
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          target.style.opacity = '1';
+          target.style.transform = 'translateY(0)';
           if (once) observer.unobserve(entry.target);
         } else {
           if (!once) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = `translateY(${offset}px)`;
+            target.style.opacity = '0';
+            target.style.transform = `translateY(${offset}px)`;
           }
         }
       },

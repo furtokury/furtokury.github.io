@@ -1,11 +1,13 @@
-<script>
+<script lang="ts">
   import { onMount } from "svelte";
   import FadeInAnimation from "../../FadeInAnimation.svelte";
   import Title from "../../Title.svelte";
   import { _ } from "svelte-i18n";
 
-  let businessCard1Data = $state({owners: [], reserveds: []});
-  let businessCard2Data = $state({owners: [], reserveds: []});
+  type CardEntry = { id: string | number; name: string };
+  type CardData = { owners: CardEntry[]; reserveds: CardEntry[] };
+  let businessCard1Data: CardData = $state({owners: [], reserveds: []});
+  let businessCard2Data: CardData = $state({owners: [], reserveds: []});
 
   onMount(() => {
     fetch(`/businesscard/1.json`)

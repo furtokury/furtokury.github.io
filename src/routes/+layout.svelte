@@ -4,7 +4,8 @@
 
 	let { children } = $props();
 
-  let contacts = $state([]);
+  type Contact = { url: string; name: string };
+  let contacts: Contact[] = $state([]);
 
   onMount(() => {
     fetch("/contacts.json")
@@ -39,7 +40,7 @@
     <div class="header-container">
       <div class="header-content">
         <div class="header-logo">
-          <a href="/"><img src="/images/logo-beige.svg" style="height: 24px; transform: translateY(3px);"> TOKU</a>
+          <a href="/"><img src="/images/logo-beige.svg" alt="" style="height: 24px; transform: translateY(3px);"> TOKU</a>
         </div>
         <div class="header-navigation">
           <div class="header-navigation-item"><a href="/">{$_("navigation.home")}</a></div>

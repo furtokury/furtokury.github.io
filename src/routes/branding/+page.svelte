@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
   import Title from '../Title.svelte';
   import "bootstrap-icons/font/bootstrap-icons.css";
   import { _ } from "svelte-i18n";
 
-  let tosSection;
-  let tosToggleIcon;
+  let tosSection: HTMLDivElement;
+  let tosToggleIcon: HTMLElement;
 
   function toggleToS() {
     if (tosSection.style.display === 'none') {
@@ -24,31 +24,31 @@
   <div class="paragraph">{$_("branding.symbol.paragraph1")}</div>
   <div class="gallery logo-gallery">
     <div style="background-color: #FAF7EA;">
-      <img src="/assets/logo_green.svg">
+      <img src="/assets/logo_green.svg" alt="Green TOKU symbol">
     </div>
     <div style="background-color: #5b7531;">
-      <img src="/assets/logo_beige.svg">
+      <img src="/assets/logo_beige.svg" alt="Beige TOKU symbol">
     </div>
     <div style="background-color: white;">
-      <img src="/assets/logo_black.svg">
+      <img src="/assets/logo_black.svg" alt="Black TOKU symbol">
     </div>
     <div style="background-color: black;">
-      <img src="/assets/logo_white.svg">
+      <img src="/assets/logo_white.svg" alt="White TOKU symbol">
     </div>
   </div>
-  <div class="paragraph-right"><a href="/assets/symbol.zip"><i class="bi bi-download"></i></a></div>
+  <div class="paragraph-right"><a href="/assets/symbol.zip" aria-label="Download symbol assets"><i class="bi bi-download"></i></a></div>
   <div class="header">LOGO</div>
   <div class="paragraph">{$_("branding.logo.paragraph1")}</div>
   <div class="paragraph">{$_("branding.logo.paragraph2")}</div>
   <div class="gallery logo-gallery">
     <div style="background-color: white;">
-      <img src="/assets/toku.svg">
+      <img src="/assets/toku.svg" alt="TOKU logo">
     </div>
     <div style="background-color: white;">
-      <img src="/assets/toku_studio.svg">
+      <img src="/assets/toku_studio.svg" alt="TOKU Studio logo">
     </div>
   </div>
-  <div class="paragraph-right"><a href="/assets/logo.zip"><i class="bi bi-download"></i></a></div>
+  <div class="paragraph-right"><a href="/assets/logo.zip" aria-label="Download logo assets"><i class="bi bi-download"></i></a></div>
   <div class="header">COLORS</div>
   <div class="paragraph">{$_("branding.colors.paragraph1")}</div>
   <div class="gallery">
@@ -68,7 +68,7 @@
   <div class="header">LEGAL GUIDELINES</div>
   <div class="paragraph">{$_("branding.legal.paragraph1")}</div>
   <div class="paragraph">
-    <button onclick={toggleToS}><i class="bi bi-chevron-right" bind:this={tosToggleIcon} /> {$_("branding.legal.button")}</button>
+    <button onclick={toggleToS}><i class="bi bi-chevron-right" bind:this={tosToggleIcon}></i> {$_("branding.legal.button")}</button>
   </div>
   <div bind:this={tosSection} style="display: none; margin-top: 16px;">
     {$_("branding.legal.dos.intro")}
