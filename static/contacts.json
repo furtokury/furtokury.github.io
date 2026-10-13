@@ -52,5 +52,11 @@
     "details": "",
     "url": "https://bumpmaps.com/p/pTRuXkSRsNEFa",
     "icon": "icon_bump.png"
+  },
+  {
+    "name": "contact.furstock.name",
+    "details": "주식회사토쿠스튜디오",
+    "url": "https://furstock.trade/stocks/%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%ED%86%A0%EC%BF%A0%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4",
+    "icon": "icon_furstock.png"
   }
 ]
