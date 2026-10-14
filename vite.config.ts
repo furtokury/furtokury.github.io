@@ -6,7 +6,4 @@ export default defineConfig({
   server: {
     allowedHosts: ["sch.shtelo.org"],
   },
-  preview: {
-    allowedHosts: ["sch.shtelo.org"],
-  },
 });
