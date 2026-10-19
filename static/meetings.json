@@ -1,6 +1,38 @@
 {
   "friends": [
     {
+      "name": "폭시",
+      "twitter": "foxx_S_"
+    },
+    {
+      "name": "어텀",
+      "twitter": "AutumnFops"
+    },
+    {
+      "name": "루츠",
+      "twitter": "omekatoys"
+    },
+    {
+      "name": "쵸",
+      "twitter": "Chomekatoys"
+    },
+    {
+      "name": "밥차",
+      "twitter": "Bobchaaaa"
+    },
+    {
+      "name": "륜",
+      "twitter": "Dae_Ryoon"
+    },
+    {
+      "name": "노엘",
+      "twitter": "Noel_Goldy"
+    },
+    {
+      "name": "피어스",
+      "twitter": "hound_pierce"
+    },
+    {
       "name": "달리",
       "twitter": "dali_artwork"
     },
@@ -282,19 +314,35 @@
           "place": "경기도 수원시",
           "href": "https://twitter.com/HowlSoup",
           "type": "event"
-        },
-        {
-          "title": "JMoF 2027: Lost in Trasit — セントレア漂流記",
-          "date": "2027. 1. 8 - 10",
-          "place": "日本愛知県常滑市",
-          "href": "https://www.jmof.jp/",
-          "type": "event"
         }
       ]
     },
     {
       "year": 2026,
       "items": [
+        {
+          "title": "FURST CLASS - GAMBLING CAT",
+          "date": "2026. 11. 28 - 29",
+          "place": "충청북도 청주시",
+          "href": "https://furst-class.com",
+          "type": "event"
+        },
+        {
+          "title": "퍼:레이드 2026 퍼리가왕전 뒷풀이",
+          "date": "2026. 10. 16",
+          "place": "서울특별시 송파구",
+          "type": "gathering",
+          "members": [
+            "루츠",
+            "민트 (피어스)",
+            "데자와 (차이)",
+            "밥차 (쉴드)",
+            "폭시",
+            "어텀",
+            "라비",
+            "노엘 (륜)"
+          ]
+        },
         {
           "title": "퍼:레이드 2026",
           "date": "2026. 10. 9 - 11",
