@@ -64,5 +64,11 @@
     "details": "furtokury",
     "url": "https://t.me/furtokury",
     "icon": "icon_telegram.svg"
+  },
+  {
+    "name": "contact.whalvkr.name",
+    "details": "토쿠",
+    "url": "https://w.halv.kr/토쿠",
+    "icon": "icon_whalvkr.svg"
   }
 ]
