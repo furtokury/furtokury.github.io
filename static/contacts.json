@@ -60,6 +60,12 @@
     "icon": "icon_furstock.png"
   },
   {
+    "name": "contact.instagram.name",
+    "details": "furtokury",
+    "url": "https://instagram.com/furtokury",
+    "icon": "icon_instagram.svg"
+  },
+  {
     "name": "contact.telegram.name",
     "details": "furtokury",
     "url": "https://t.me/furtokury",
